@@ -24,13 +24,24 @@ import com.tsahimur.ubflood.service.CategoryService;
 public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	
+	private static String urlReq;
 	@Inject
 	private CategoryService categoryService;
 	
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
+	
+	@RequestMapping(value = "/user", method = RequestMethod.GET)
+	public String user(Locale locale, Model model) {
+		return "mn/user";
+	}
+	
+	@RequestMapping(value = "/management", method = RequestMethod.GET)
+	public String management(Locale locale, Model model) {
+		return "mn/management";
+	}
+	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
@@ -49,7 +60,7 @@ public class HomeController {
 		c.setParentId(1);
 		
 		categoryService.createCategory(c);;
-		return "home";
+		return "mn/home";
 	}
 	
 }

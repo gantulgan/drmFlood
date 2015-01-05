@@ -1,0 +1,227 @@
+/*Start==Main Body*/
+.col-lg-5 p {
+	margin-left: 20px;
+}
+body {
+    font: 76% arial,sans-serif;
+    text-align:center;
+    background-color: #333;
+    margin:  0px;  
+}
+p {
+    margin:0 10px 10px;
+}
+a {
+    display:block;
+    color: #981793;
+    padding:10px;
+}
+/*End==Main Body*/
+/*Start==div*/
+/*background*/
+div#background {
+    background-image: url('../../resources/images/bg2.jpg');  
+    background-repeat: no-repeat;
+    background-size: 100% 100%; 
+    background-attachment: fixed;
+    background-style: fixed;
+}
+/*Profile LINKS*/
+div#headProtector {
+	margin-top: 48px;
+}
+/* div#hWrapper {
+    background-image: url('resources/images/header.jpg');
+    margin-top: 8px;
+    padding-top: 5px;
+    z-index: 909;
+} */
+.navbar-brand {
+	display: inline-block;
+}
+.navbar-brand img{
+	opacity: 0.8;
+}
+.navbar-brand img:hover {
+	opacity: 1;
+} 
+div#profile a {
+	display: inline-block;
+	padding: 10px 10px;
+	text-decoration: none;
+    color: #696969;
+}
+div#profile a:hover, a:focus {
+    color: white;
+	text-decoration: none;
+}
+/* div#tabs {
+    padding:  0px;
+    margin:  0px auto;
+}
+div#tabs ul {
+    text-align: left;
+    padding:  0px;
+    margin:  0px auto;
+    border-style: solid;
+    border-color: #696969;
+    border-width: 2px 0px 0px 0px; 
+}
+div#tabs ul li {
+    display:  inline;
+    padding:  0px;
+    margin:  0px auto;
+}
+div#tabs ul li a {
+	display: inline-block;
+	text-decoration: none;
+    color: #696969;
+    
+}
+div#tabs ul li a:hover {
+    color: white;
+
+} */
+/*THE END*/
+/*header*/
+div#header {
+    width:  1024px;
+    margin: 0 auto;
+}
+div#header h1{
+    color: white;
+    text-align: left;
+    margin: 0px 0px 0px 5%;
+}
+div#header h2{
+    color: #CDCCCC;
+    text-align: left;
+    margin-left: 15%;
+}
+/*container*/
+div#bodyContainer {
+    text-align:center;
+    width:  1024px;
+    margin: 0px auto 0px;      
+}
+/*hBanner*/
+div#hBanner {
+    background-color: #981793;
+    background-image: url("../../resources/images/hBanner.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin: 0px auto;
+    height: 260px;
+}
+/*content*/
+div#contentBody {
+	background-color: #ccecf4;
+	margin: auto;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+#contentBody img#thumbnail {
+	width: 140px;
+	height: 140px;
+	margin: 10px auto;
+}
+.col-md-6:hover,
+.col-md-6:focus {
+	border: 2px solid white;
+    opacity: 1;
+}
+.col-md-6 {
+	border: 2px solid #ccecf4;
+	opacity: 0.8;
+}
+div#content {
+    background-color: #ccecf4;
+    width:1024px;
+}
+/*fLinkStrip*/
+div#fLinkStrip {
+    background-image:  url('../../resources/images/fStrip.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height:  20px;
+}
+/*fLinks*/
+div#fLinks {
+    background-image: url('../../resources/images/fLBg.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    clear: both;
+    text-align: left;
+}
+#fLinks h5 {
+	padding-left: 10px;
+}
+#sitemap {
+    margin: 20px auto;
+}
+#sitemap ul {
+	list-style-type: none;
+}
+#sitemap li {
+	margin: 5px auto;
+}
+#sitemap a {
+	color: black;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px;
+    margin:  0px 0px 0px 5px;
+}
+#sitemap a:hover {
+    color: white;
+}
+#sitemap a img:hover {
+	opacity: 0.4;
+}
+/*fBanner*/
+div#fBanner {
+    background:#FF8539;
+    background-image:  url('../../resources/images/fBanner.jpg');
+    height: 150px;
+}
+/*footer*/
+div#footer {
+    background: #ccecf4;
+    color: #696969;
+    width: 100%;
+}
+div#footer p {
+    padding: 10px 10px;
+    float: left;
+}
+div#footer ul {
+    text-align: right;
+}
+div#footer ul li {
+    display:  inline;
+}
+div#footer ul li a {
+	display: inline-block;
+	background-color: #ccecf4;
+	padding: 10px 10px;
+	text-decoration: none;
+    color: #696969;
+}
+div#footer ul li a:hover {
+    color: white;
+    background-color: black;
+}
+/*End==div*/
+
+div#location {
+	text-align: left;
+	margin: 0px auto;
+}
+#location a {
+	display: inline-block;
+	text-decoration: none;
+}
+#location a:hover,
+#location a:focus {
+	opacity: 0.7;
+}
