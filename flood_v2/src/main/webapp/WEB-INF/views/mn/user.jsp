@@ -6,9 +6,9 @@
 </head>
 
 <div id="wrapper">
-	<jsp:include page="${pageContext.request.pathInfo}includes/navbar.jsp"></jsp:include>
-	<jsp:include page="${pageContext.request.pathInfo}customerBody.jsp"></jsp:include>
-	<jsp:include page="${pageContext.request.pathInfo}includes/footer.jsp"></jsp:include>  
+	<%-- <jsp:include page="${pageContext.request.pathInfo}includes/navbar.jsp"></jsp:include> --%>
+	<jsp:include page="${pageContext.request.pathInfo}mapper/mapper_view.jsp"></jsp:include>
+	<%-- <jsp:include page="${pageContext.request.pathInfo}includes/footer.jsp"></jsp:include>   --%>
 </div>
 
 

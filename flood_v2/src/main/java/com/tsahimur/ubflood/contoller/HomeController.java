@@ -32,6 +32,11 @@ public class HomeController {
 	 * Simply selects the home view to render by returning its name.
 	 */
 	
+	@RequestMapping(value = "/mapper", method = RequestMethod.GET)
+	public String mapper(Locale locale, Model model) {
+		return "mn/mapper";
+	}
+	
 	@RequestMapping(value = "/user", method = RequestMethod.GET)
 	public String user(Locale locale, Model model) {
 		return "mn/user";

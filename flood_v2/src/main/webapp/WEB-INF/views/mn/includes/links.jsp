@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<link rel="stylesheet" type="text/css" href="resources/css/common.css">
-<link rel="stylesheet" type="text/css" href="resources/css/main.css">
+<link href=<c:url value="resources/css/common.css" /> rel="stylesheet" type="text/css" >
+<link href=<c:url value="resources/css/main.css" /> rel="stylesheet" type="text/css" >
 <link href=<c:url value="resources/css/bootstrap.min.css"/> rel="stylesheet">
 <link href=<c:url value="resources/css/navbar.css"/> rel="stylesheet">
 <link href=<c:url value="resources/font-awesome-4.1.0/css/font-awesome.min.css"/> rel="stylesheet" type="text/css">
@@ -18,4 +18,4 @@
 <script src=<c:url value="resources/js/plugins/metisMenu/metisMenu.min.js"/>></script>
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="resources/js/ie10-viewport-bug-workaround.js"></script>
+<script src=<c:url value="resources/js/ie10-viewport-bug-workaround.js"/>></script>
