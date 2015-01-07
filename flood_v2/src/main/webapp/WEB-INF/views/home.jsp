@@ -1,3 +1,4 @@
+<%@page import="com.tsahimur.ubflood.entity.Post"%>
 <%@page import="com.tsahimur.ubflood.entity.Category"%>
 <%@page import="javax.persistence.EntityManager"%>
 <%@page import="javax.persistence.Persistence"%>
@@ -16,20 +17,29 @@
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
-<%-- <% --%>
-// EntityManagerFactory emf = Persistence.createEntityManagerFactory("ubflood-PU");
-// EntityManager em = emf.createEntityManager();
-// Category cat = new Category();
-// cat.setActiveFlag(true);
-// cat.setId(1);
-// cat.setCategoryName("New Category-1");
-// cat.setParentId(0);
-// em.getTransaction().begin();
-// em.persist(cat);
+<%
+EntityManagerFactory emf = Persistence.createEntityManagerFactory("ubflood-PU");
+EntityManager em = emf.createEntityManager();
+Category cat = new Category();
+cat.setActiveFlag(true);
+cat.setNameMon("Category Mongol");
+cat.setNameMon("Category Eng");
 
-// em.getTransaction().commit();
-// em.close();
-// emf.close();
-<%-- %> --%>
+Post post = new Post(); 
+post.setActiveFlag(true);
+post.setCategory(cat);
+post.setContentEn("ENG CONTENT");
+post.setContentMon("MON CONTENT");
+post.setTitleEn("ENG - TITLE");
+post.setTitleMon("MON - TITLE");
+
+em.getTransaction().begin();
+em.persist(cat);
+em.persist(post);
+
+em.getTransaction().commit();
+em.close();
+emf.close();
+%> 
 </body>
 </html>

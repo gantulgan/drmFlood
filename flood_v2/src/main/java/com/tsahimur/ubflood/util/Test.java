@@ -1,5 +1,8 @@
 package com.tsahimur.ubflood.util;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -14,8 +17,11 @@ public class Test {
 		Category cat = new Category();
 		cat.setActiveFlag(true);
 		cat.setId(1);
-		cat.setCategoryName("New Category-1");
-		cat.setParentId(0);
+//		cat.setCategoryName("New Category-1");
+//		cat.setParentId(0);
+		
+		
+				
 		
 		em.persist(cat);
 		em.close();

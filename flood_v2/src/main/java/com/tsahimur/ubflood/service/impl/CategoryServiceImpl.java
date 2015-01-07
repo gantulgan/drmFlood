@@ -1,4 +1,4 @@
-package com.tsahimur.ubflood.service;
+package com.tsahimur.ubflood.service.impl;
 
 import java.util.List;
 
@@ -9,11 +9,12 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.tsahimur.ubflood.dao.CategoryDao;
 import com.tsahimur.ubflood.entity.Category;
+import com.tsahimur.ubflood.service.CategoryService;
 
 
 @Service
 @Transactional
-public class CategoryServiceImpl implements CategoryService 
+public class CategoryServiceImpl implements CategoryService
 {
 //	public void print(){System.out.println("Print me");};
 	
@@ -26,20 +27,18 @@ public class CategoryServiceImpl implements CategoryService
 
 	@Override
 	public void updateCategory(Category category) {
-		// TODO Auto-generated method stub
+		categoryDao.update(category);
 		
 	}
 
 	@Override
 	public void deleteCategory(Category category) {
-		// TODO Auto-generated method stub
-		
+		categoryDao.delete(category);
 	}
 
 	@Override
 	public List<Category> getAllCategories() {
-		// TODO Auto-generated method stub
-		return null;
+		return categoryDao.findAll();
 	}
 
 	@Override

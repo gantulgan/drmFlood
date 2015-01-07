@@ -1,18 +1,23 @@
 package com.tsahimur.ubflood.entity;
 
 import java.io.Serializable;
+import java.util.LinkedList;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "T_CATEGORY")
 public class Category implements Serializable {
-	
+
 	/**
 	 * 
 	 */
@@ -22,16 +27,25 @@ public class Category implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
 	private int id;
+
+	@Column(name = "name_mon")
+	private String nameMon;
 	
-	@Column(name = "category_name")
-	private String categoryName;
+	@Column(name = "name_en")
+	private String nameEn;
 	
-	@Column(name = "parent_id")
-	private int parentId;
+	@ManyToOne
+	@JoinColumn(name = "parent_id")
+	private Category parent;
+	
+	@OneToMany(mappedBy ="parent")
+	private List<Category> childCategories = new LinkedList<Category>();
+	
+	@OneToMany(mappedBy ="category")
+	private List<Post> posts = new LinkedList<Post>();
 	
 	@Column(name = "active_flag")
 	private boolean activeFlag;
-
 	
 	public int getId() {
 		return id;
@@ -41,22 +55,31 @@ public class Category implements Serializable {
 		this.id = id;
 	}
 
-	public String getCategoryName() {
-		return categoryName;
+	
+	public String getNameMon() {
+		return nameMon;
 	}
 
-	public void setCategoryName(String categoryName) {
-		this.categoryName = categoryName;
+	public void setNameMon(String nameMon) {
+		this.nameMon = nameMon;
 	}
 
-	public int getParentId() {
-		return parentId;
+	public String getNameEn() {
+		return nameEn;
 	}
 
-	public void setParentId(int parentId) {
-		this.parentId = parentId;
+	public void setNameEn(String nameEn) {
+		this.nameEn = nameEn;
 	}
 
+	public Category getParent() {
+		return parent;
+	}
+
+	public void setParent(Category parent) {
+		this.parent = parent;
+	}
+	
 	public boolean isActiveFlag() {
 		return activeFlag;
 	}
@@ -65,10 +88,27 @@ public class Category implements Serializable {
 		this.activeFlag = activeFlag;
 	}
 
+	public List<Category> getChildCategories() {
+		return childCategories;
+	}
+
+	public void setChildCategories(List<Category> childCategories) {
+		this.childCategories = childCategories;
+	}
+	
+	public List<Post> getPosts() {
+		return posts;
+	}
+
+	public void setPosts(List<Post> posts) {
+		this.posts = posts;
+	}
+
 	@Override
 	public String toString() {
-		return "Category [id=" + id + ", categoryName=" + categoryName
-				+ ", parentId=" + parentId + ", activeFlag=" + activeFlag + "]";
+		return "Category [id=" + id + ", nameMon=" + nameMon + ", nameEn="
+				+ nameEn + ", parent=" + parent + ", childCategories="
+				+ childCategories + ", activeFlag=" + activeFlag + "]";
 	}
 
 }

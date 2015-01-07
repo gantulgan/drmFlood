@@ -1,10 +1,12 @@
-package com.tsahimur.ubflood.dao;
+package com.tsahimur.ubflood.dao.impl;
 
 import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+
+import com.tsahimur.ubflood.dao.GenericDao;
 
 /**
  * GenericDAO class-n biejuulelt/implementation

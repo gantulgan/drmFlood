@@ -1,7 +1,8 @@
-package com.tsahimur.ubflood.dao;
+package com.tsahimur.ubflood.dao.impl;
 
 import org.springframework.stereotype.Repository;
 
+import com.tsahimur.ubflood.dao.CategoryDao;
 import com.tsahimur.ubflood.entity.Category;
 
 @Repository
