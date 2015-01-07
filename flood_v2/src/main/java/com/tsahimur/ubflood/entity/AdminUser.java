@@ -1,5 +1,7 @@
 package com.tsahimur.ubflood.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,8 +11,13 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "admin_user")
-public class AdminUser {
+public class AdminUser implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6808365949938930197L;
+
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")

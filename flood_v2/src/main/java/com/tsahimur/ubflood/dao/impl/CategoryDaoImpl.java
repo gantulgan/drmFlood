@@ -6,7 +6,7 @@ import com.tsahimur.ubflood.dao.CategoryDao;
 import com.tsahimur.ubflood.entity.Category;
 
 @Repository
-public class CategoryDaoImpl extends GenericDaoImpl<Category, Long> implements CategoryDao {
+public class CategoryDaoImpl extends GenericDaoImpl<Category, Integer> implements CategoryDao {
 
 	public CategoryDaoImpl() {
 		super(Category.class);

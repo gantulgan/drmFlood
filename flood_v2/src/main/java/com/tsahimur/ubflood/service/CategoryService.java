@@ -5,17 +5,18 @@ import java.util.List;
 import com.tsahimur.ubflood.entity.Category;
 
 
-
 public interface CategoryService {
 
 //	public void print();
-	
-	public void createCategory(Category category);
-	public void updateCategory(Category category);
+
+	public Category getCategoryById(int id);
+	public Category createCategory(Category category);
+	public Category updateCategory(Category category);
 	public void deleteCategory(Category category);
+	public boolean deleteCategoryById(int id);
 	
 	public List<Category> getAllCategories();
 
 	public List<Category> getRootCategories();
-	
+
 }

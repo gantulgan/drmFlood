@@ -71,6 +71,7 @@ public class Category implements Serializable {
 	public void setNameEn(String nameEn) {
 		this.nameEn = nameEn;
 	}
+	
 
 	public Category getParent() {
 		return parent;
@@ -108,7 +109,8 @@ public class Category implements Serializable {
 	public String toString() {
 		return "Category [id=" + id + ", nameMon=" + nameMon + ", nameEn="
 				+ nameEn + ", parent=" + parent + ", childCategories="
-				+ childCategories + ", activeFlag=" + activeFlag + "]";
+				+ childCategories + ", posts=" + posts + ", activeFlag="
+				+ activeFlag + "]";
 	}
 
 }

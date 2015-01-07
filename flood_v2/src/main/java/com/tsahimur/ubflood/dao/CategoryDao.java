@@ -2,7 +2,7 @@ package com.tsahimur.ubflood.dao;
 
 import com.tsahimur.ubflood.entity.Category;
 
-public interface CategoryDao extends GenericDao<Category, Long> {
+public interface CategoryDao extends GenericDao<Category, Integer> {
 
 	/**
 	 * Category name avch bolohoor baigaa esehiig shalgana.

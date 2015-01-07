@@ -21,13 +21,13 @@ public class CategoryServiceImpl implements CategoryService
 	@Inject private CategoryDao categoryDao;
 
 	@Override
-	public void createCategory(Category category) {
-		categoryDao.save(category);
+	public Category createCategory(Category category) {
+		return categoryDao.save(category);
 	}
 
 	@Override
-	public void updateCategory(Category category) {
-		categoryDao.update(category);
+	public Category updateCategory(Category category) {
+		return categoryDao.update(category);
 		
 	}
 
@@ -45,6 +45,22 @@ public class CategoryServiceImpl implements CategoryService
 	public List<Category> getRootCategories() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public Category getCategoryById(int id) {
+		return categoryDao.findById(id);
+	}
+
+	@Override
+	public boolean deleteCategoryById(int id) {
+		Category cat = getCategoryById(id);
+		// Ustgahiin tuld child category bolon post-gui bh yostoi
+		if ( (cat.getChildCategories() == null || cat.getChildCategories().size() == 0) && ( cat.getPosts() == null || cat.getPosts().size() == 0)){
+			categoryDao.delete(cat);
+			return true;
+		} 
+		return false;
 	}
 	
 	
