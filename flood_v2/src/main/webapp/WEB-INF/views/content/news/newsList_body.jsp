@@ -7,7 +7,7 @@
 	<hr class="featurette-divider">
     <div class="row featurette">
 		<div class="col-md-3 hidden-sm hidden-xs">
-        	<img class="img-circle img-responsive" id="thumbnail" src="/images/thumbnail/news.png" alt="" >
+        	<img class="img-circle img-responsive" id="thumbnail" src="${pageContext.request.pathInfo }resources/images/thumbnail/news.png" alt="" >
 	    </div>
 	    <div class="col-md-9">
 	    	<p>Улаанбаатар хотын үерийн талаархи мэдээлэл</p>
