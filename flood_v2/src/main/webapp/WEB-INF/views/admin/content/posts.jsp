@@ -59,6 +59,8 @@ post list page
 			<td><c:out value="${post.titleEn}"></c:out></td>
 			<td><c:out value="${post.activeFlag}"></c:out></td>
 			<td><c:out value="${post.category.nameMon}"/>|<c:out value="${post.category.nameEn}"/></td>
+			<td><c:out value="${post.contentMon}"></c:out></td>
+			<td><c:out value="${post.contentEn}"></c:out></td>
 			<td><a href="${pageContext.request.contextPath}/admin/post/view/${post.id}" class="btn btn-default">Detail</a></td>
 			<td><a href="${pageContext.request.contextPath}/admin/post/edit/${post.id}" class="btn btn-default">Update</a></td>
 			<td><a href="${pageContext.request.contextPath}/admin/post/remove/${post.id}" class="btn btn-danger">Remove</a></td>
