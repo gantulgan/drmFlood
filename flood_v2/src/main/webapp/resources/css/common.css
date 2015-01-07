@@ -1,0 +1,402 @@
+@CHARSET "UTF-8";
+div.sub_news
+{
+	background-color: #99d9ea;
+}
+
+div.sub_body p
+{
+	margin-right: 10px;
+	color: black;		
+}
+div.sub_title
+{
+	background-color: #00a2e8;
+    color: white; 
+	margin-right: 10px; 
+}
+
+.news_category>h2
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.news_category
+{
+	color: white;
+	background-color: #0e2d41;
+	padding: 0px;
+	margin: auto;
+}
+img.thumbnail_img
+{
+	max-height:	150px;
+	padding: 10px 10px;
+}
+div.news_brief
+{
+ 	max-width: 380px;
+}
+div.news_category_title
+{
+	background-color: #ccecf4;
+	font-style: italic;
+	border-bottom: 2px solid;
+}
+.title_img
+{
+	max-height: 30px;
+	max-width: 30px;
+	height:auto; 
+	width:auto;
+}
+#map_control_view
+{
+	/* max-width: 290px; */
+	height: 580px;
+	background-color: #9ebec6;
+	border-bottom: 2px;
+}
+
+.map_view
+{
+/* 	max-width: 714px;
+	max-height: 580px; */
+}
+
+.map_loading {
+	width: 100%; /*can be in percentage also.*/
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    z-index: 900;
+}
+.news_category_title>h1
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.news_category_title
+{
+	clear: both;
+}
+.mapper_area
+{
+	position: relative;
+}
+.mapControllerTab
+{
+	height: 35px;
+}
+#mapControls
+{
+	position: relative;	
+}
+#district_control_select
+{	
+	float: left; 
+	width: 50%;
+	height: 35px;
+	vertical-align: middle;
+}
+#basin_control_select
+{
+	float: right; 
+	width: 50%;
+	height: 35px;
+	vertical-align: middle;
+}
+.row1	/*энийг анхаарч янзлах!!!  */
+{
+	display: table;
+}
+.col1, .col2, .col, cell
+{
+	display: table-cell;
+	float: left;
+}
+#narrowCheckbox
+{
+	float: left;
+}
+
+#narrowCheckbox ul
+{
+	margin: 0;
+	list-style: none;
+	float: left;
+	display:inline-block;
+	text-align: left;
+}
+#narrowCheckbox ul li
+{
+	font-size: medium;
+	padding-bottom: 10px;
+}
+
+.line
+{	
+	margin: 20px 0px 0px 0px;
+	height: 1px;
+	background-color: black;
+}
+
+.mapChooserPane
+{
+	height: 150px;
+}
+#leftMenu li
+{
+	list-style: none;
+	text-align: left;
+}
+
+.dMSchemeContainer
+{
+	position: relative;
+}
+.dMScheme
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.absolutePos{
+	position: absolute;
+}
+.diagramDescription
+{
+	background-color: #f5ef8f;
+	border: 1px solid #a1a1a1;
+    border-radius: 25px;
+    padding: 10px 10px; 
+    font-size: small;
+}
+
+/* #dmRiskArea */
+/* { */
+/* 	height: 66px; */
+/* 	width: 129px; */
+/* 	top: 160px; */
+/* 	left: 126px; */
+/* } */
+#dmMonitoringArea
+{
+	height: 46px;
+	width: 105px;
+	top: 73px;
+	left: 130px;
+}
+#dmPreparednessArea
+{
+	height: 57px;
+	width: 125px;
+	top: 262px;
+	left: 113px;
+}
+#dmPreventionArea
+{
+	height: 58px;
+	width: 105px;
+	top: 166px;
+	left: 2px;
+}
+#dmPredictiveArea
+{
+	height: 51px;
+	width: 93px;
+	top: 169px;
+	left: 263px;
+}
+/* #dmDamageArea */
+/* { */
+/* 	height: 67px; */
+/* 	width: 135px; */
+/* 	top: 9px; */
+/* 	left: 258px; */
+/* } */
+/* #dmWarningArea */
+/* { */
+/* 	height: 51px; */
+/* 	width: 101px; */
+/* 	top: 307px; */
+/* 	left: 288px; */
+/* } */
+#dmRecoveryArea
+{
+	height: 57px;
+	width: 105px;
+	top: 76px;
+	left: 394px;
+}
+/* #dmHazardArea */
+/* { */
+/* 	height: 100px; */
+/* 	width: 101px; */
+/* 	top: 147px; */
+/* 	left: 404px; */
+/* } */
+#dmReadinessArea
+{
+	height: 33px;
+	width: 96px;
+	top: 256px;
+	left: 457px;
+}
+#dmResponseArea
+{
+	height: 52px;
+	width: 98px;
+	top: 132px;
+	left: 523px;
+}
+.dmOverArea:hover{
+	border: thin dashed blue;
+}
+
+
+/* #dmRiskAreaText */
+/* { */
+/* 	height: 66px; */
+/* 	width: 129px; */
+/* 	top: 160px; */
+/* 	left: 126px; */
+/* } */
+#dmMonitoringAreaText
+{
+	height: 105px;
+	width: 219px;
+	top: 120px;
+	left: 78px;
+}
+#dmPreparednessAreaText
+{
+	height: 128px;
+	width: 224px;
+	top: 320px;
+	left: 52px;
+}
+#dmPreventionAreaText
+{
+	height: 130px;
+	width: 250px;
+	top: 230px;
+	left: 4px;
+}
+#dmPredictiveAreaText
+{
+	height: 90px;
+	width: 237px;
+	top: 220px;
+	left: 200px;
+}
+/* #dmDamageAreaText */
+/* { */
+/* 	height: 67px; */
+/* 	width: 135px; */
+/* 	top: 9px; */
+/* 	left: 258px; */
+/* } */
+/* #dmWarningAreaText */
+/* { */
+/* 	height: 51px; */
+/* 	width: 101px; */
+/* 	top: 307px; */
+/* 	left: 288px; */
+/* } */
+#dmRecoveryAreaText
+{
+	height: 58px;
+	width: 219px;
+	top: 135px;
+	left: 337px;
+}
+/* #dmHazardAreaText */
+/* { */
+/* 	height: 100px; */
+/* 	width: 101px; */
+/* 	top: 147px; */
+/* 	left: 404px; */
+/* } */
+#dmReadinessAreaText
+{
+	height: 58px;
+	width: 219px;
+	top: 290px;
+	left: 395px;
+}
+#dmResponseAreaText
+{
+	height: 50px;
+	width: 150px;
+	top: 185px;
+	left: 465px;
+}
+.headerLogo
+{
+	height: 40px;
+	width: 40px;
+	margin: -5px 0px;
+	display: inline-block;
+}
+.headerWarning
+{
+	background-color: white;
+	color: red;
+	font-style: normal;
+}
+#mapMenu {
+	margin: auto;
+}
+.mapTopMenu, #mapMenu div
+{
+	height: 40px;
+	background-image: url("resources/images/menu-background.gif");
+	color: #bec7cc;
+	padding: 5px 0px;
+	margin: 0px auto;
+/* 	opacity: 0.7; */
+/*     filter: alpha(opacity=70); For IE8 and earlier */
+    font-weight: bold;
+}
+.mapTopDistrictMenu
+{
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 8px 0px 0px 0px;
+	border-radius: 8px 0px 0px 0px; 
+}
+.mapTopDistrictMenu:hover, #mapMenu div:hover
+{
+	color: yellow;
+	opacity: 0.7;
+    filter: alpha(opacity=0.7); /* For IE8 and earlier */
+}
+
+.mapTopBasinMenu
+{
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px 8px 0px 0px;
+	border-radius: 0px 8px 0px 0px;
+	color: grey; 
+	opacity: 0.8; */
+    filter: alpha(opacity=0.8); For IE8 and earlier
+}
+
+.selectedSubMenu
+{
+	color: orange;
+}
+
+.fullscreenButton
+{
+	background-color: #2c3e4e;
+	color: 	#bec7cc; 
+}
+.fullscreen{
+	width: 100%;
+	height: 100%;
+}
