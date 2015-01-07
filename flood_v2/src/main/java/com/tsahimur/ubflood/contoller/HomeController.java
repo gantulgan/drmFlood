@@ -56,5 +56,24 @@ public class HomeController {
 		return "adminLogin";
 	}
 	
-	
+	@RequestMapping(value = "/management", method = RequestMethod.GET)
+	public String management(Locale locale, Model model) {
+		return "management";
+	}
+	@RequestMapping(value = "/mapper", method = RequestMethod.GET)
+	public String mapper(Locale locale, Model model) {
+		return "mapper";
+	}
+	@RequestMapping(value = "/main", method = RequestMethod.GET)
+	public String main(Locale locale, Model model) {
+		return "main";
+	}
+	@RequestMapping(value = "/news", method = RequestMethod.GET)
+	public String news(Locale locale, Model model) {
+		return "news";
+	}
+	@RequestMapping(value = "/info", method = RequestMethod.GET)
+	public String info(Locale locale, Model model) {
+		return "info";
+	}
 }
