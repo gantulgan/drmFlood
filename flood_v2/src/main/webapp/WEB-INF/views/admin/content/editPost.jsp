@@ -7,6 +7,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script src=<c:url value="/resources/js/bootstrap.min.js"/>></script>
+<script src=<c:url value="/resources/js/tinymce/tinymce.min.js"/>></script>
 </head>
 <body>
 ${post.id}
@@ -22,12 +26,27 @@ ${post.id == '52' ? 'yes':'no'}
 			</c:forEach>
 		</form:select>
 		
-		<div>Mongol content <form:input path="contentMon" /></div>
+		<div>Mongol content <form:textarea class="texteditor" path="contentMon" /></div>
 		
-		<div>English content <form:input path="contentEn" /></div>
+		<div>English content <form:textarea class="texteditor" path="contentEn" /></div>
 		</div>
 		<div>Active_Flag :<form:checkbox path="activeFlag" /></div>
 		<div><input type="submit" value="Update"></div>
 	</form:form>
+<script type="text/javascript">
+tinymce.init({
+    selector: "textarea.texteditor",
+    fontsize_formats: "8pt 9pt 10pt 11pt 12pt 26pt 36pt",
+    theme: 'modern',
+    plugins: [
+        "advlist autolink lists link image charmap print preview anchor",
+        "searchreplace visualblocks code fullscreen",
+        "insertdatetime media table contextmenu paste "
+    ],
+    toolbar: "insertfile undo redo | fontselect | fontsizeselect | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+});
+
+</script>
+	
 </body>
 </html>
