@@ -338,8 +338,8 @@ div.news_category_title
 }
 .headerLogo
 {
-	height: 40px;
-	width: 40px;
+	height: 35px;
+	width: 50px;
 	margin: -5px 0px;
 	display: inline-block;
 }
@@ -355,7 +355,7 @@ div.news_category_title
 .mapTopMenu, #mapMenu div
 {
 	height: 40px;
-	background-image: url("resources/images/menu-background.gif");
+	background-image: url("../images/menu-background.gif");
 	color: #bec7cc;
 	padding: 5px 0px;
 	margin: 0px auto;
