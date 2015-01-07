@@ -22,7 +22,7 @@ EntityManagerFactory emf = Persistence.createEntityManagerFactory("ubflood-PU");
 EntityManager em = emf.createEntityManager();
 Category cat = new Category();
 cat.setActiveFlag(true);
-<<<<<<< HEAD:flood_v2/src/main/webapp/WEB-INF/views/home.jsp
+
 cat.setNameMon("Category Mongol");
 cat.setNameMon("Category Eng");
 
@@ -42,17 +42,5 @@ em.getTransaction().commit();
 em.close();
 emf.close();
 %> 
-=======
-cat.setId(2);
-cat.setCategoryName("New Category-1");
-cat.setParentId(0);
-em.getTransaction().begin();
-em.persist(cat);
-
-em.getTransaction().commit();
-em.close();
-emf.close();
-%>
->>>>>>> 1830c6cb573b84ef1c0f18a3607897b7362e2f99:flood_v2/src/main/webapp/WEB-INF/draft/home.jsp
 </body>
 </html>
