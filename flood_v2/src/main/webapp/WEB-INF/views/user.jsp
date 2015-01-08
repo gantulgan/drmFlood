@@ -2,7 +2,7 @@
 
 <head>
     <title>Тавтай морил</title>
-	<jsp:include page="${pageContext.request.pathInfo}includes/links.jsp"></jsp:include>
+	<jsp:include page="/resources/link/links.jsp"></jsp:include>
 </head>
 
 <div id="wrapper">
