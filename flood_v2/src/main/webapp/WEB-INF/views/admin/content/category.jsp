@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Амжилттай категори</title>
 </head>
 <body>
 	Category Id : ${category.id}<br/>
@@ -18,5 +18,7 @@
 		Post Mon Title: ${post.titleMon} | ${post.titleEn}  	
 	</c:forEach>
 	
+	<br>
+	<a href="${pageContext.request.pathInfo}../">back</a>
 </body>
 </html>

@@ -2,6 +2,7 @@ package com.tsahimur.ubflood.contoller;
 
 import java.text.DateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 import javax.inject.Inject;
@@ -11,12 +12,16 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.tsahimur.ubflood.entity.Category;
+import com.tsahimur.ubflood.entity.Post;
 import com.tsahimur.ubflood.service.CategoryService;
+import com.tsahimur.ubflood.service.PostService;
+import com.tsahimur.ubflood.util.Constant;
 
 /**
  * Handles requests for the application home page.
@@ -29,7 +34,13 @@ public class HomeController {
 	
 	/**
 	 * Simply selects the home view to render by returning its name.
+	 * 
 	 */
+	@Inject
+	CategoryService categoryService;
+	@Inject
+	PostService postService;
+	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		logger.info("Welcome home! The client locale is {}.", locale);
@@ -68,12 +79,26 @@ public class HomeController {
 	public String main(Locale locale, Model model) {
 		return "main";
 	}
-	@RequestMapping(value = "/news", method = RequestMethod.GET)
+	/*@RequestMapping(value = "/news", method = RequestMethod.GET)
 	public String news(Locale locale, Model model) {
 		return "news";
-	}
+	}*/
 	@RequestMapping(value = "/info", method = RequestMethod.GET)
 	public String info(Locale locale, Model model) {
 		return "info";
+	}
+	
+	// ---------------------- post list & view
+	@RequestMapping(value = "/news", method = RequestMethod.GET)
+	public String getPosts(Model model) {
+		List<Post> posts = postService.getAllPosts();
+		model.addAttribute("posts", posts);
+		return Constant.PAGE.USER_LIST_POST;
+	}
+	@RequestMapping(value = "/news/view/{id}", method = RequestMethod.GET)
+	public String getPostDetail(@PathVariable int id, Model model){
+		Post post = postService.getPostById(id);
+		model.addAttribute( "post", post );
+		return Constant.PAGE.USER_VIEW_POST;
 	}
 }
