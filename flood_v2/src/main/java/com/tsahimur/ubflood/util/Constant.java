@@ -29,6 +29,10 @@ public final class Constant {
 		// RD is for REDIRECT
 		public static final String RD_LIST_CATEGORY = "redirect:/admin/category";
 		public static final String RD_LIST_POST = "redirect:/admin/post";
+		
+		//USER PAGES
+		public static final String USER_LIST_POST = "news";
+		public static final String USER_VIEW_POST = "main";
 	}
 	
 	

@@ -27,6 +27,9 @@ ${category.id == '53' ? 'selected=\'selected\'':''}
 		</div>
 		<div>Active_Flag :<form:checkbox path="activeFlag" /></div>
 		<div><input type="submit" value="Update"></div>
-	</form:form>
+</form:form>
+	
+	<br>
+	<a href="${pageContext.request.pathInfo}../">back</a>
 </body>
 </html>

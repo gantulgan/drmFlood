@@ -9,14 +9,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 <title>${pageTitle}</title>
 </head>
 <body>
+
+	<jsp:include page="${pageContext.request.pathInfo}../includes/adminHeader.jsp"></jsp:include>
+
 	this is admin home page
-	<a href="${pageContext.request.contextPath}/admin/category" >Category List</a>
-	<a href="${pageContext.request.contextPath}/admin/post" >Post List</a>
-	<a href="${pageContext.request.contextPath}/admin/alert" >Alert msg</a>
-	
+	<br>
+		
 	Language : <a href="?lang=en">English</a>|<a href="?lang=mn">Mongolian</a>|<a href="?lang=fr">French</a>
 	<h3>
 	welcome.springmvc : <spring:message code="common.message.unimplemented" text="default text" />

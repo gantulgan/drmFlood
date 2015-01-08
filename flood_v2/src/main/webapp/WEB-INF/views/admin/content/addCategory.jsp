@@ -26,5 +26,8 @@ this is add category
 		<div>Active_Flag :<form:checkbox path="activeFlag" /></div>
 		<div><input type="submit" value="Add"></div>
 	</form:form>
+
+	<br>
+	<a href="${pageContext.request.pathInfo}../category">back</a>
 </body>
 </html>

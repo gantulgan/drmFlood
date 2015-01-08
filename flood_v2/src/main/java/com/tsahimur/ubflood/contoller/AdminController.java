@@ -169,7 +169,7 @@ public class AdminController {
 		return Constant.PAGE.LIST_POST;
 	}
 	
-	@RequestMapping(value = "/post", method = RequestMethod.POST)
+	@RequestMapping(value = "/post/new", method = RequestMethod.POST)
 	public String postPostForm(Model model, @ModelAttribute("post") Post formPost){
 		Post p = postService.createPost(formPost);
 		return "redirect:/admin/post/view/"+p.getId();
