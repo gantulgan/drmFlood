@@ -89,16 +89,23 @@ public class HomeController {
 	}
 	
 	// ---------------------- post list & view
-	@RequestMapping(value = "/news", method = RequestMethod.GET)
-	public String getPosts(Model model) {
+	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
+	public String user_getPosts(Model model) {
 		List<Post> posts = postService.getAllPosts();
 		model.addAttribute("posts", posts);
 		return Constant.PAGE.USER_LIST_POST;
 	}
-	@RequestMapping(value = "/news/view/{id}", method = RequestMethod.GET)
-	public String getPostDetail(@PathVariable int id, Model model){
+	@RequestMapping(value = "/view&{id}", method = RequestMethod.GET)
+	public String user_getPostDetail(@PathVariable int id, Model model){
 		Post post = postService.getPostById(id);
 		model.addAttribute( "post", post );
 		return Constant.PAGE.USER_VIEW_POST;
 	}
+	
+	
+	@RequestMapping(value="dbtest", method = RequestMethod.GET)
+	public String testDB(){
+		return "/admin/checkDB";
+	}
+	
 }
