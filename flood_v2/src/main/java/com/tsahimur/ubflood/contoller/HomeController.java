@@ -79,10 +79,6 @@ public class HomeController {
 	public String main(Locale locale, Model model) {
 		return "main";
 	}
-	/*@RequestMapping(value = "/news", method = RequestMethod.GET)
-	public String news(Locale locale, Model model) {
-		return "news";
-	}*/
 	@RequestMapping(value = "/info", method = RequestMethod.GET)
 	public String info(Locale locale, Model model) {
 		return "info";

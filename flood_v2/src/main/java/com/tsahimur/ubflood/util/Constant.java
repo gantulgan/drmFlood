@@ -31,8 +31,8 @@ public final class Constant {
 		public static final String RD_LIST_POST = "redirect:/admin/post";
 		
 		//USER PAGES
-		public static final String USER_LIST_POST = "news";
-		public static final String USER_VIEW_POST = "main";
+		public static final String USER_LIST_POST = "content";
+		public static final String USER_VIEW_POST = "contentDetail";
 	}
 	
 	

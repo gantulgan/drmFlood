@@ -9,7 +9,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 <title>Home</title>
-<jsp:include page="${pageContext.request.pathInfo}includes/links.jsp"></jsp:include>    
+<jsp:include page="/resources/link/links.jsp"></jsp:include>    
 </head>
 <body>
     <div id="background">
