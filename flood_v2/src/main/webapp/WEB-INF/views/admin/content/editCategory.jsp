@@ -16,11 +16,11 @@ ${category.id == '53' ? 'selected=\'selected\'':''}
 		<div>English ner <form:input path="nameEn" /></div>
 			<form:hidden path="id"/>
 		<div>Parent Category 
-		<form:select path="parent">
+		<form:select path="parent" tabin>
 			<form:option value="">Root</form:option>
 			<c:forEach items="${categories}" var="cat">
 				
-				<form:option  value="${cat.id}"  > ${cat.nameMon} | ${cat.nameEn }</form:option>
+				<form:option  value="${cat.id}" > ${cat.nameMon} | ${cat.nameEn }</form:option>
 			</c:forEach>
 <%-- 			<form:options items="${categories}" itemValue="id" itemLabel="${nameEn}${nameMon}"/> --%>
 		</form:select>

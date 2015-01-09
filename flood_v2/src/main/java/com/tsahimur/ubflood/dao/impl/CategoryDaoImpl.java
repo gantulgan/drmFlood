@@ -1,5 +1,7 @@
 package com.tsahimur.ubflood.dao.impl;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import com.tsahimur.ubflood.dao.CategoryDao;
@@ -23,5 +25,10 @@ public class CategoryDaoImpl extends GenericDaoImpl<Category, Integer> implement
 		// TODO Auto-generated method stub
 		return null;
 	}
+	@SuppressWarnings("unchecked")
+	public List<Category> getRootCategory() {
+		return getEntityManager().createQuery("SELECT x FROM " + getPersistentClass().getSimpleName() + " x WHERE x.parent IS NULL").getResultList();
+	}
+
 
 }

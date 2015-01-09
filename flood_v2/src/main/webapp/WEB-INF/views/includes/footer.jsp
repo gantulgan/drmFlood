@@ -52,20 +52,18 @@
 				<a href="http://www.youtube.com/watch?v=rnHX-SJIvG0"><img src="resources/images/icons/youtube.png" alt="youtube" style="width: 25px; height: 25px"></img></a>
 				</li>
 				</ul>
-				<!-- <p>Утас: 7011-****</p> -->
 		</div>
 		</div>
 	</div>
 	</div>
 </div>
 <div class="container">
-<!-- 	<div id="fBanner"></div> -->
 	<div id="footer">
-		<p>2014он. Зохиогчийн эрхээр хамгаалагдсан &copy;.
 		<ul>
-			<li>Веб сайтын зохиомж, шийдэлийг:<a href=""><b>TUZOX LLC</b></a></li>
+			<li>2014он. &copy;</li>
+<!-- 			<li>Веб сайтын зохиомж, шийдэлийг:<a href=""><b>TUZOX LLC</b></a></li>
 			<li>Беб сайт хөгжүүлсэн:<a href=""><b>TSAHIMUR LLC</b></a></li>
 			<li>Дүрсийн тоон боловсруулалт, зураглалыг:<a href=""><b>JEMR LLC</b></a></li>
-		</ul>
+ -->		</ul>
 	</div>
 </div>
