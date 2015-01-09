@@ -43,14 +43,9 @@ public class HomeController {
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
+		List<Category> categories = categoryService.getRootCategories();
 		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
+		model.addAttribute("categories", categories);
 		return "home";
 	}
 	
@@ -72,6 +67,11 @@ public class HomeController {
 		return "mapper";
 	}
 	
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public String login(Locale locale, Model model) {
+		return "admin/login";
+	}
+	
 	// ---------------------- post list & view
 	@RequestMapping(value = "/content&{id}", method = RequestMethod.GET)
 	public String user_getPosts(Model model) {
@@ -91,11 +91,4 @@ public class HomeController {
 		model.addAttribute( "post", post );
 		return Constant.PAGE.USER_VIEW_POST;
 	}
-	
-	
-	@RequestMapping(value="dbtest", method = RequestMethod.GET)
-	public String testDB(){
-		return "/admin/checkDB";
-	}
-	
 }
