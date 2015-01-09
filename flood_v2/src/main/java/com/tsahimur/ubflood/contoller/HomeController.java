@@ -67,33 +67,27 @@ public class HomeController {
 		return "adminLogin";
 	}
 	
-	@RequestMapping(value = "/management", method = RequestMethod.GET)
-	public String management(Locale locale, Model model) {
-		return "management";
-	}
 	@RequestMapping(value = "/mapper", method = RequestMethod.GET)
 	public String mapper(Locale locale, Model model) {
 		return "mapper";
 	}
-	@RequestMapping(value = "/main", method = RequestMethod.GET)
-	public String main(Locale locale, Model model) {
-		return "main";
-	}
-	@RequestMapping(value = "/info", method = RequestMethod.GET)
-	public String info(Locale locale, Model model) {
-		return "info";
-	}
 	
 	// ---------------------- post list & view
-	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "/content&{id}", method = RequestMethod.GET)
 	public String user_getPosts(Model model) {
 		List<Post> posts = postService.getAllPosts();
+		List<Category> categories = categoryService.getRootCategories();
+		
+		model.addAttribute("categories", categories);
 		model.addAttribute("posts", posts);
 		return Constant.PAGE.USER_LIST_POST;
 	}
 	@RequestMapping(value = "/view&{id}", method = RequestMethod.GET)
 	public String user_getPostDetail(@PathVariable int id, Model model){
 		Post post = postService.getPostById(id);
+		List<Category> categories = categoryService.getRootCategories();
+		
+		model.addAttribute("categories", categories);
 		model.addAttribute( "post", post );
 		return Constant.PAGE.USER_VIEW_POST;
 	}

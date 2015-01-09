@@ -1,5 +1,7 @@
 package com.tsahimur.ubflood.dao;
 
+import java.util.List;
+
 import com.tsahimur.ubflood.entity.Category;
 
 public interface CategoryDao extends GenericDao<Category, Integer> {
@@ -12,7 +14,7 @@ public interface CategoryDao extends GenericDao<Category, Integer> {
 	 */
 	boolean checkNameAvailable(String username);
 	
-	
+	public List<Category> getRootCategory();
 	/**
 	 * Name-r Category-g olno.
 	 * 

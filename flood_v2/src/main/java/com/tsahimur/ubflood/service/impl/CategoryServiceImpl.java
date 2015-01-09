@@ -44,7 +44,7 @@ public class CategoryServiceImpl implements CategoryService
 	@Override
 	public List<Category> getRootCategories() {
 		// TODO Auto-generated method stub
-		return null;
+		return categoryDao.getRootCategory();
 	}
 
 	@Override

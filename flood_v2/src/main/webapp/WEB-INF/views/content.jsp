@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
 	<meta name="author" content="">
-<title>Мэдээ</title>
+<title>Тавтай морил</title>
 <jsp:include page="/resources/link/links.jsp"></jsp:include>
 
 </head>
