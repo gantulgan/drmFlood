@@ -16,7 +16,7 @@ ${category.id == '53' ? 'selected=\'selected\'':''}
 		<div>English ner <form:input path="nameEn" /></div>
 			<form:hidden path="id"/>
 		<div>Parent Category 
-		<form:select path="parent" tabin>
+		<form:select path="parent" >
 			<form:option value="">Root</form:option>
 			<c:forEach items="${categories}" var="cat">
 				
