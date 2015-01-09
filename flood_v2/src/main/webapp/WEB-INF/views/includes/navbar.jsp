@@ -8,13 +8,13 @@
 <div class="navbar-default sidebar" role="navigation">
     <div class="sidebar-nav navbar-collapse">
         <ul class="nav" id="side-menu">
-    	<c:forEach items="${categories}" var="cat">
+    	<c:forEach items="${categories}" var="root">
             <li>
-                <a href="#">${cat.nameMon}<span class="fa arrow"></span></a>
+                <a href="#">${root.nameMon}<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
-                <c:forEach items="${cat.childCategories}" var="child">
+                <c:forEach items="${root.childCategories}" var="child">
                 	<li>
-                        <a href="${pageContext.request.contextPath}/${child.id}">${child.nameMon}</a>
+                        <a href="${pageContext.request.contextPath}/content&${child.id}">${child.nameMon}</a>
                     </li>
                 </c:forEach>
                 </ul>

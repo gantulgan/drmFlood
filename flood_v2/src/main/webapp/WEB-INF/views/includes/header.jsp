@@ -35,9 +35,9 @@
 		<div class="form-group">
             <a href="${pageContext.request.contextPath}">Нүүр</a>
         </div>
-        <div class="form-group">                
+<!--         <div class="form-group">                
             <a href="management">Менежмент</a>
-        </div>
+        </div> -->
         <div class="form-group">                
             <a href="mapper">Газрын зураг</a>
         </div>
