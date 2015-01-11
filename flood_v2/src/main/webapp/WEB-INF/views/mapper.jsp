@@ -15,12 +15,7 @@
     <div id="background">
     <jsp:include page="${pageContext.request.pathInfo}includes/header.jsp"></jsp:include>
 	    <div id="headProtector">
-	    <div class="container">
-	    <div id="contentBody">
-	    <hr class="featurette-divider">
 			<jsp:include page="${pageContext.request.pathInfo}mapper/mapper_body.jsp"/>
-		</div>
-		</div>	
 		</div>	
 	<jsp:include page="${pageContext.request.pathInfo}includes/footer.jsp"></jsp:include>
 	</div>

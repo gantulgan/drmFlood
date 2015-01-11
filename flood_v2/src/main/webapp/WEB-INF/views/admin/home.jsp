@@ -27,6 +27,7 @@
 	</h3>
 <%-- 	${post.id == '52' ? 'yes':'no'} --%>
 	Current Locale : ${pageContext.response.locale.language == 'en' ? 'english' : 'mongolian'}
+	${pageContext.request.contextPath}
 	
 </body>
 </html>

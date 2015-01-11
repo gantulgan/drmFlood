@@ -64,6 +64,8 @@ public class HomeController {
 	
 	@RequestMapping(value = "/mapper", method = RequestMethod.GET)
 	public String mapper(Locale locale, Model model) {
+		List<Category> categories = categoryService.getRootCategories();
+		model.addAttribute("categories", categories);
 		return "mapper";
 	}
 	
@@ -73,7 +75,7 @@ public class HomeController {
 	}
 	
 	// ---------------------- post list & view
-	@RequestMapping(value = "/content&{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "/category/{id}", method = RequestMethod.GET)
 	public String user_getPosts(Model model) {
 		List<Post> posts = postService.getAllPosts();
 		List<Category> categories = categoryService.getRootCategories();
@@ -82,7 +84,7 @@ public class HomeController {
 		model.addAttribute("posts", posts);
 		return Constant.PAGE.USER_LIST_POST;
 	}
-	@RequestMapping(value = "/view&{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "/content/{id}", method = RequestMethod.GET)
 	public String user_getPostDetail(@PathVariable int id, Model model){
 		Post post = postService.getPostById(id);
 		List<Category> categories = categoryService.getRootCategories();

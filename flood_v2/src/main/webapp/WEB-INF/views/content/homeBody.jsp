@@ -3,8 +3,6 @@
 	
 	
 <div class="container">
-<div id="contentBody" >
-<hr class="featurette-divider">
 	<%-- <div class="row featurette" style="margin: 0px;">
 		<c:forEach items="${categories}" var="root">
 		<div class="col-md-6 col-lg-3">
@@ -18,7 +16,8 @@
 		</div>
 		</c:forEach>    	
 	</div> --%>
-    <div class="row" style="margin: 0px;">
+    <div id="contentBody" class="row">
+<hr class="featurette-divider"/>
         <div class="col-md-6 col-lg-2">
                 <div class="row featurette">
 					<div class="col-sm-12">
@@ -86,8 +85,10 @@
 		          </div>
 		        </div>
 	      	</div>
-		</div>      	
+		</div>      
+		<div class="row">
+		<div class="col-xs-6">
+	<hr class="featurette-divider"/></div>
 	</div>
-	<hr class="featurette-divider">
-</div>
+	</div>
 </div>

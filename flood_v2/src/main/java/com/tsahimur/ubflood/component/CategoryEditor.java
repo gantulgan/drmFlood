@@ -21,10 +21,10 @@ public class CategoryEditor extends PropertyEditorSupport {
 		} catch (NumberFormatException e) {
 			this.setValue(null);
 		}
-		System.out.println("CATEGORY ID FROM EDITOR: " + id);
+//		System.out.println("CATEGORY ID FROM EDITOR: " + id);
 		if (id != null){
 			Category c = this.categoryService.getCategoryById(id);
-			System.out.println("CATEGORY : " +c);
+//			System.out.println("CATEGORY : " +c);
 			this.setValue(c);
 		}
 	}

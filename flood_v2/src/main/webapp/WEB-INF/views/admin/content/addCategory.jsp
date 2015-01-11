@@ -28,6 +28,6 @@ this is add category
 	</form:form>
 
 	<br>
-	<a href="${pageContext.request.pathInfo}../category">back</a>
+	<a href="${pageContext.request.contextPath}/admin/category">back</a>
 </body>
 </html>

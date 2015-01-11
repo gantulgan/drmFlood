@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <div class="container">
-<div class="row carousel-holder">
-     <div class="col-md-12">
+<div class="row carousel-holder" style="padding: -15px;">
+     <div class="col-md-12" style="padding-left: 0px; padding-right: 0px;">
          <div id="homeHeader" class="carousel slide" data-ride="carousel">
              <div class="carousel-inner">
                  <div class="item active">

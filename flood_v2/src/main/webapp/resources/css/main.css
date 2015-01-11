@@ -11,11 +11,11 @@ body {
 p {
     margin:0 10px 10px;
 }
-a {
-    display:block;
-    color: #981793;
-    padding:10px;
-}
+/* a { */
+/*     display:block; */
+/*     color: #981793; */
+/*     padding:10px; */
+/* } */
 /*End==Main Body*/
 /*Start==div*/
 /*background*/
@@ -92,7 +92,7 @@ div#homeHeader {
 	/* background-image: url('../images/headerBG1.jpg'); */
 	background-color: #097599;
 	color: white; 
-	padding: 33px 0px;
+	padding: 40px 0px;
 }
 /* #homeHeader a {
 	color: #002d3d;
@@ -113,9 +113,6 @@ div#contentWrapper {
 }
 div#contentBody {
 	background-color: #ccecf4;
-	margin: auto;
-	padding-top: 15px;
-	padding-bottom: 15px;
 }
 #contentBody img#thumbnail {
 	width: 140px;
@@ -163,7 +160,7 @@ div#fLinks {
     color: white;
     clear: both;
     text-align: left;
-	padding: 50px;
+/* 	padding: 50px; */
 }
 #fLinks h5 {
 	padding-left: 10px;
@@ -202,7 +199,6 @@ div#fLinks {
 div#footer {
     background: #ccecf4;
     color: #696969;
-    width: 100%;
 }
 div#footer p {
 	padding: 10px 10px;

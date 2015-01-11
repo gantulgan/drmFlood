@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<spring:message var="more" code="common.moredetail" />
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -18,7 +20,7 @@
 		<jsp:include page="${pageContext.request.pathInfo}includes/header.jsp"></jsp:include>
 	<div class="container">
 	<div id="contentHolder">
-	<div class="row" style="margin-right: 0px;">
+	<div class="row" style="background-color: #6DAFBF;">
 		<div class="col-sm-3">
 			<jsp:include page="${pageContext.request.pathInfo}includes/navbar.jsp"></jsp:include>
 		</div>
@@ -26,18 +28,20 @@
 			<div id="headProtector">
 			<div id="dMSchemeContainer">
 			<c:forEach var="post" items="${posts}">	
+			
 			<div class="responsive" style="text-align: left;">
-				<div class="row" id="newsTitle"><h3><c:out value="${post.titleMon}"></c:out></h3></div>
-				<hr class="featurette-divider">
 			    <div class="row featurette">
-					<div class="col-md-3 hidden-sm hidden-xs">
-			        	<img class="img-circle img-responsive" id="thumbnail" src="${pageContext.request.pathInfo }resources/images/thumbnail/news.png" alt="" >
+				    <div class="col-md-12">
+				     <p class="bg-primary" style="padding-top: 0px; padding-bottom: 0px;"><a style="color: white;"><img style="height: 30px; width: 30px;" id="thumbnail" src="${pageContext.request.contextPath }resources/images/thumbnail/news2.png" alt="" />
+				    	<strong><c:out value="${pageContext.response.locale.language == 'en' ? post.titleEn : post.titleMon }"/></strong></a></p>
+				    	<div style="display: block; min-height: 80px; max-height: 120px; overflow: hidden;">
+				    	<p >${pageContext.response.locale.language == 'en' ? post.contentEn : post.contentMon}</p>
+				    	</div>
+				    	<p style="text-align: right;"><a style="text-align: right; padding-top: 0px; padding-bottom: 0px;" href="${pageContext.request.contextPath}/content/${post.id}">${more}</a>
+				    	</p>
 				    </div>
-				    <div class="col-md-9">
-				    	<p>${post.contentMon}</p>
-				        <a href="${pageContext.request.pathInfo }./content/view/${post.id}">Дэлгэрэнгүй</a>
-				    </div>
-			   	</div>
+			   	</div>	
+			   	<hr class="featurette-divider"/>
 			</div>
 			</c:forEach>
 			</div>

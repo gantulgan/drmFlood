@@ -45,7 +45,7 @@ this is add post
 	</script>
 	
 	<br>
-	<a href="${pageContext.request.pathInfo}../">back</a>
+	<a href="${pageContext.request.contextPath}/admin/post">back</a>
 </body>
 
 
