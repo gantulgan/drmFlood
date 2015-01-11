@@ -37,11 +37,8 @@
     <div id="profile">
       <form class="navbar-form navbar-right" role="form">
 		<div class="form-group">
-            <a href="${pageContext.request.contextPath}">${home}</a>
+            <a href="${pageContext.request.contextPath}/">${home}</a>
         </div>
-<!--         <div class="form-group">                
-            <a href="management">Менежмент</a>
-        </div> -->
         <div class="form-group">                
             <a href="${pageContext.request.contextPath}/mapper">${mapper}</a>
         </div>
