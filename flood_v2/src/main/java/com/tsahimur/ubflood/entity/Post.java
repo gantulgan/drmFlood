@@ -41,7 +41,7 @@ public class Post implements Serializable {
 	@Column(name = "active_flag")
 	private boolean activeFlag;
 	
-	@ManyToOne/*(fetch = FetchType.LAZY)*/
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "category_id")
 	private Category category;
 
