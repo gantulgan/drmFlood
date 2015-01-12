@@ -21,7 +21,7 @@
 		<jsp:include page="${pageContext.request.pathInfo}includes/header.jsp"></jsp:include>
 		<jsp:include page="${pageContext.request.pathInfo}includes/homeHeader.jsp"></jsp:include>
 		<jsp:include page="${pageContext.request.pathInfo}content/homeBody.jsp"></jsp:include>
-		<jsp:include page="${pageContext.request.pathInfo}includes/footer.jsp"></jsp:include>
+		<jsp:include page="${pageContext.request.pathInfo}includes/homeFooter.jsp"></jsp:include>
 	</div>	
 </body>
 </html>

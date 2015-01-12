@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -84,6 +85,15 @@ public class HomeController {
 		model.addAttribute("posts", posts);
 		return Constant.PAGE.USER_LIST_POST;
 	}
+	/*@RequestMapping(value = "/{rootName}", method = RequestMethod.GET)
+	public String user_getPostByRootCategory(@PathVariable String rootName, Model model) {
+		List<Post> posts = postService.getPostsByRootName(rootName);
+		List<Category> categories = categoryService.getRootCategories();
+		
+		model.addAttribute("categories", categories);
+		model.addAttribute("posts", posts);
+		return Constant.PAGE.USER_LIST_POST;
+	}*/
 	@RequestMapping(value = "/content/{id}", method = RequestMethod.GET)
 	public String user_getPostDetail(@PathVariable int id, Model model){
 		Post post = postService.getPostById(id);

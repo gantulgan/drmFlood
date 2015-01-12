@@ -19,4 +19,9 @@ public class PostDaoImpl  extends GenericDaoImpl<Post, Integer> implements PostD
 	public List<Post> getPostsByCategoryId(int id) {
 		return getEntityManager().createQuery("SELECT x FROM " + getPersistentClass().getSimpleName() + " x WHERE x.category.id = " + id).getResultList();
 	}
+	
+	@SuppressWarnings("unchecked")
+	public List<Post> getPostsByRootName(String rootName) {
+		return getEntityManager().createQuery("SELECT x FROM " + getPersistentClass().getSimpleName() + " x").getResultList();
+	}
 }

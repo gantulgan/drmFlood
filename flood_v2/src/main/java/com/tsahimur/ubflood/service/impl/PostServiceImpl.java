@@ -53,5 +53,10 @@ public class PostServiceImpl implements PostService {
 	public List<Post> getPostsByCategoryId(int id) {
 		return postDao.getPostsByCategoryId(id);
 	}
+	
+	@Override
+	public List<Post> getPostsByRootName(String rootName) {
+		return postDao.getPostsByRootName(rootName);
+	}
 
 }

@@ -13,4 +13,6 @@ public interface PostService {
 	
 	public List<Post> getAllPosts();
 	public List<Post> getPostsByCategoryId(int id);
+	public List<Post> getPostsByRootName(String rootName);
+	
 }

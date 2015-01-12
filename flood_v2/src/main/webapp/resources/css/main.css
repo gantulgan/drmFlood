@@ -122,6 +122,9 @@ div#contentBody {
 div#contentLink {
 	text-align: left;
 }
+#contentLink ul {
+	list-style-type: none;
+}
 #contentLink a {
 	text-decoration: none;
 	display: inline-block;
