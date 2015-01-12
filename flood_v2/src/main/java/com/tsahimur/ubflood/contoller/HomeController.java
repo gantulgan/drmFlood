@@ -76,8 +76,8 @@ public class HomeController {
 	
 	// ---------------------- post list & view
 	@RequestMapping(value = "/category/{id}", method = RequestMethod.GET)
-	public String user_getPosts(Model model) {
-		List<Post> posts = postService.getAllPosts();
+	public String user_getPosts(@PathVariable int id, Model model) {
+		List<Post> posts = postService.getPostsByCategoryId(id);
 		List<Category> categories = categoryService.getRootCategories();
 		
 		model.addAttribute("categories", categories);

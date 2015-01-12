@@ -12,4 +12,5 @@ public interface PostService {
 	public void deletePostById(int id);
 	
 	public List<Post> getAllPosts();
+	public List<Post> getPostsByCategoryId(int id);
 }
