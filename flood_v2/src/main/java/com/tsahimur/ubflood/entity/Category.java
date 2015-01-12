@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -34,14 +35,14 @@ public class Category implements Serializable {
 	@Column(name = "name_en")
 	private String nameEn;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "parent_id")
 	private Category parent;
 	
-	@OneToMany(mappedBy ="parent")
+	@OneToMany(mappedBy ="parent", fetch = FetchType.LAZY)
 	private List<Category> childCategories = new LinkedList<Category>();
 	
-	@OneToMany(mappedBy ="category")
+	@OneToMany(mappedBy ="category", fetch = FetchType.LAZY)
 	private List<Post> posts = new LinkedList<Post>();
 	
 	@Column(name = "active_flag")
