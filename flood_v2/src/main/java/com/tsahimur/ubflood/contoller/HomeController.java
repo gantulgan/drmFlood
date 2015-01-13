@@ -52,25 +52,11 @@ public class HomeController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		Date now = new Date();
-		SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
-		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-		
-		String strNow = dateFormat.format(now);
-		System.out.println(strNow);
-		
-		Date date = new Date();
-		
-		try {
-			date = formatter.parse(strNow);
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		/*List<Alert> alerts = alertService.getAlertByDate(date);*/
+				
+		List<Alert> alerts = alertService.getAlertByDate(now);
 		List<Category> categories = categoryService.getRootCategories();
 		
-		/*model.addAttribute("alerts", alerts);*/
+		model.addAttribute("alerts", alerts);
 		model.addAttribute("categories", categories);
 		return "home";
 	}

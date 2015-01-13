@@ -7,7 +7,6 @@ import org.springframework.stereotype.Repository;
 
 import com.tsahimur.ubflood.dao.AlertDao;
 import com.tsahimur.ubflood.entity.Alert;
-import com.tsahimur.ubflood.entity.Category;
 
 @Repository
 public class AlertDaoImpl extends GenericDaoImpl<Alert, Integer> implements AlertDao {
@@ -24,7 +23,9 @@ public class AlertDaoImpl extends GenericDaoImpl<Alert, Integer> implements Aler
 
 	@SuppressWarnings("unchecked")
 	public List<Alert> getAlertByDate(Date date) {
-		return getEntityManager().createQuery("SELECT x FROM " + getPersistentClass().getSimpleName() + " x WHERE x.endDate > "
-												+ date ).getResultList();
+		/*java.sql.Date sqlDate = new java.sql.Date(date.getDate()); */
+	    
+		return getEntityManager().createQuery("SELECT x FROM " + getPersistentClass().getSimpleName() 
+				+ " x WHERE :date between x.startDate and x.endDate ").setParameter("date", date).getResultList();
 	}
 }
