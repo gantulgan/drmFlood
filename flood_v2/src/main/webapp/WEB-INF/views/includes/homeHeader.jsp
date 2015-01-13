@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <spring:message var="moredetail" code="common.moredetail" />
 <spring:message var="management" code="carousel.management" />
@@ -59,7 +60,12 @@
                  <span class="glyphicon glyphicon-chevron-right"></span>
              </a>
          </div>
-         <div class="headerWarning" ><marquee scrollamount="4"> 2014.07.01 13:29 > THE PUBLIC REPORTED WATER FLOWING OVER A COUPLE OF PAVED ROADS NEAR WATERVILLAGE, UB. </marquee></div>
+         <div class="headerWarning" >
+         <marquee scrollamount="4">
+	         <c:forEach items="${alerts}" var="alert">
+	           <p>${alert.startDate} | ${alert.alertMon}</p>
+	         </c:forEach>
+         </marquee></div>
      </div>
 </div>
 </div>        

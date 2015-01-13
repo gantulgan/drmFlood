@@ -1,7 +1,10 @@
 package com.tsahimur.ubflood.dao;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
+
+import com.tsahimur.ubflood.entity.Alert;
 
 /**
  * Generic interface for DAO. 

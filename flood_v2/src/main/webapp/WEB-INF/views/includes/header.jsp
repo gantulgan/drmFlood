@@ -42,9 +42,9 @@
         <div class="form-group">                
             <a href="${pageContext.request.contextPath}/mapper">${mapper}</a>
         </div>
-        <div class="form-group">                
+<%--         <div class="form-group">                
             <a href="${pageContext.request.contextPath}/info">${contact}</a>
-        </div>
+        </div> --%>
         <div class="form-group">                
 			<a href="${pageContext.request.contextPath}/admin/login">${login}</a>
   		</div>

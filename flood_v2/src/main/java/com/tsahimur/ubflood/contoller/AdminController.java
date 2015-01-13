@@ -1,5 +1,11 @@
 package com.tsahimur.ubflood.contoller;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -9,6 +15,7 @@ import javax.servlet.http.HttpSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.WebDataBinder;
@@ -19,11 +26,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.tsahimur.ubflood.component.CategoryEditor;
+import com.tsahimur.ubflood.component.AlertDateEditor;
 import com.tsahimur.ubflood.entity.Alert;
 import com.tsahimur.ubflood.entity.Category;
 import com.tsahimur.ubflood.entity.Post;
 import com.tsahimur.ubflood.service.CategoryService;
 import com.tsahimur.ubflood.service.PostService;
+import com.tsahimur.ubflood.service.AlertService;
 import com.tsahimur.ubflood.util.AdminUtil;
 import com.tsahimur.ubflood.util.CommonUtil;
 import com.tsahimur.ubflood.util.Constant;
@@ -38,12 +47,16 @@ public class AdminController {
 	CategoryService categoryService;
 	@Inject
 	PostService postService;
+	@Inject
+	AlertService alertService;
 	
 	private @Autowired CategoryEditor categoryEditor;
+	private @Autowired AlertDateEditor alertDateEditor;
 	
 	@InitBinder
     public void initBinder(WebDataBinder binder) {
         binder.registerCustomEditor(Category.class, this.categoryEditor);
+	    binder.registerCustomEditor(Date.class, this.alertDateEditor);
     }
 
 	/**
@@ -213,12 +226,54 @@ public class AdminController {
 	}
 	
 
-	// ---------------------- Post functions
+	// ---------------------- Alert functions
 	@RequestMapping(value = "/alert", method = RequestMethod.GET)
-	public String getAlert(Model model) {
+	public String getAllAlert(Model model) {
+		List<Alert> alerts = alertService.getAllAlerts();
+		model.addAttribute("alerts", alerts);
 		
 		return Constant.PAGE.LIST_ALERT;
 	}
 	
+	@RequestMapping(value = "/alert", method = RequestMethod.POST)
+	public String createAlert(Model model, @ModelAttribute("alert") Alert formAlert){
+		Alert a = alertService.createAlert(formAlert);
+		return "redirect:/admin/alert/view/" + a.getId();
+	}
+	
+	@RequestMapping(value = "/alert/view/{id}", method = RequestMethod.GET)
+	public String getAlertById(@PathVariable int id, Model model){
+		Alert alert = alertService.getAlertById(id);
+		model.addAttribute( "alert", alert );
+		return Constant.PAGE.VIEW_ALERT;
+	}
+	
 
+	@RequestMapping(value = "/alert/edit/{id}", method = RequestMethod.GET)
+	public String getAlertToEdit(@PathVariable int id, Model model){
+		
+		Alert alert = alertService.getAlertById(id);
+		if ( alert == null ){
+			model.addAttribute( "errorMsg", "No alert");
+			return Constant.PAGE.LIST_ALERT; 
+		}
+		else {
+			model.addAttribute( "alert", alert );
+			return Constant.PAGE.EDIT_ALERT;
+		}
+	}
+	
+	@RequestMapping(value = "/alert/edit", method = RequestMethod.POST)
+	public String updateAlert(@ModelAttribute("alert") Alert formAlert){
+		
+		Alert a = alertService.updateAlert(formAlert);
+		return "redirect:/admin/alert/view/" + a.getId();
+	}
+	
+	@RequestMapping(value = "/alert/remove/{id}", method = RequestMethod.GET)
+	public String removeAlert(@PathVariable int id, Model model ){
+		alertService.deleteAlertById(id);
+		model.addAttribute("info", "Amjilttai ustgalaa");
+		return Constant.PAGE.RD_LIST_ALERT;
+	}	
 }

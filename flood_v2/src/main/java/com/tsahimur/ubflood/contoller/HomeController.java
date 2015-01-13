@@ -1,6 +1,9 @@
 package com.tsahimur.ubflood.contoller;
 
 import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
@@ -18,8 +21,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.tsahimur.ubflood.entity.Alert;
 import com.tsahimur.ubflood.entity.Category;
 import com.tsahimur.ubflood.entity.Post;
+import com.tsahimur.ubflood.service.AlertService;
 import com.tsahimur.ubflood.service.CategoryService;
 import com.tsahimur.ubflood.service.PostService;
 import com.tsahimur.ubflood.util.Constant;
@@ -41,11 +46,31 @@ public class HomeController {
 	CategoryService categoryService;
 	@Inject
 	PostService postService;
+	@Inject
+	AlertService alertService;
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
+		Date now = new Date();
+		SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
+		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		
+		String strNow = dateFormat.format(now);
+		System.out.println(strNow);
+		
+		Date date = new Date();
+		
+		try {
+			date = formatter.parse(strNow);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		/*List<Alert> alerts = alertService.getAlertByDate(date);*/
 		List<Category> categories = categoryService.getRootCategories();
 		
+		/*model.addAttribute("alerts", alerts);*/
 		model.addAttribute("categories", categories);
 		return "home";
 	}
