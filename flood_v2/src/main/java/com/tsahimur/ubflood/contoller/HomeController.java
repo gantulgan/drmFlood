@@ -61,19 +61,6 @@ public class HomeController {
 		return "home";
 	}
 	
-	@RequestMapping(value = "/admin1")
-	public String homeAdmin(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		return "adminLogin";
-	}
-	
 	@RequestMapping(value = "/mapper", method = RequestMethod.GET)
 	public String mapper(Locale locale, Model model) {
 		List<Category> categories = categoryService.getRootCategories();
@@ -96,15 +83,7 @@ public class HomeController {
 		model.addAttribute("posts", posts);
 		return Constant.PAGE.USER_LIST_POST;
 	}
-	/*@RequestMapping(value = "/{rootName}", method = RequestMethod.GET)
-	public String user_getPostByRootCategory(@PathVariable String rootName, Model model) {
-		List<Post> posts = postService.getPostsByRootName(rootName);
-		List<Category> categories = categoryService.getRootCategories();
-		
-		model.addAttribute("categories", categories);
-		model.addAttribute("posts", posts);
-		return Constant.PAGE.USER_LIST_POST;
-	}*/
+
 	@RequestMapping(value = "/content/{id}", method = RequestMethod.GET)
 	public String user_getPostDetail(@PathVariable int id, Model model){
 		Post post = postService.getPostById(id);
