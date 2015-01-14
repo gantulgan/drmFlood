@@ -4,6 +4,7 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	<persistence-unit name="ubflood-PU" transaction-type="RESOURCE_LOCAL">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<class>com.tsahimur.ubflood.entity.Alert</class>
 		<class>com.tsahimur.ubflood.entity.Category</class>
 		<class>com.tsahimur.ubflood.entity.Post</class>
 		<class>com.tsahimur.ubflood.entity.AdminUser</class>
