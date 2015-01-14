@@ -17,5 +17,5 @@
 	<div class="col-xs-1 btn btn-primary" ><a style="color: white;" href="${pageContext.request.contextPath}/admin/post/">Post</a></div>
 	<div class="col-xs-1 btn btn-primary" ><a style="color: white;" href="${pageContext.request.contextPath}/admin/alert/">Alert</a></div>
 	<div class="col-xs-1"></div>
-	<div class="col-xs-1 btn btn-danger" ><a style="color: white;" href="${pageContext.request.contextPath}/admin/logout/">Log out</a></div>
+	<div class="col-xs-1 btn btn-danger" >Log out</div>
 </div>
