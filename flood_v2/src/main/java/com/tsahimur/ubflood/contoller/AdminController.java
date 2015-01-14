@@ -1,12 +1,18 @@
 package com.tsahimur.ubflood.contoller;
 
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.servlet.jsp.PageContext;
 
+import org.apache.commons.fileupload.FileUpload;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +24,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.tsahimur.ubflood.component.CategoryEditor;
 import com.tsahimur.ubflood.component.AlertDateEditor;
@@ -30,6 +39,7 @@ import com.tsahimur.ubflood.service.AlertService;
 import com.tsahimur.ubflood.util.AdminUtil;
 import com.tsahimur.ubflood.util.CommonUtil;
 import com.tsahimur.ubflood.util.Constant;
+import com.tsahimur.ubflood.util.AdminFileUpload;
 import com.tsahimur.ubflood.web.forms.LoginForm;
 
 @Controller
@@ -270,4 +280,19 @@ public class AdminController {
 		model.addAttribute("info", "Amjilttai ustgalaa");
 		return Constant.PAGE.RD_LIST_ALERT;
 	}	
+	
+	// ---------------------- fileUpload functions
+	@RequestMapping(value = "/upload", method = RequestMethod.GET)
+	public String upload(Locale locale, Model model) {
+
+		return "/admin/upload";
+	}
+	
+    @RequestMapping(value = "/upload/uploadFile", method = RequestMethod.POST)
+    public @ResponseBody
+    String uploadFileHandler(/*@RequestParam("name") String name,*/
+            @RequestParam("file") MultipartFile file, HttpServletRequest request  ) {
+ 
+        return AdminFileUpload.saveFile(file, request);
+    }
 }

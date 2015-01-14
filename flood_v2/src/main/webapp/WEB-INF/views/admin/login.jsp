@@ -14,8 +14,8 @@
 	</c:if>
 	<h1>Please log in</h1>
 	<form class="main" action="${postLoginUrl}" method="post">
-		Username: <input type="text" name="username" /><br /> Password: <input
-			type="password" name="password" /><br /> <input type="checkbox"
+		Username: <input type="text" name="j_username" /><br /> Password: <input
+			type="password" name="j_password" /><br /> <input type="checkbox"
 			name="_spring_security_remember_me" /> Remember me<br /> <input
 			type="submit" value="Log in" />
 	</form>
