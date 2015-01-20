@@ -295,4 +295,12 @@ public class AdminController {
  
         return AdminFileUpload.saveFile(file, request);
     }
+    
+    @RequestMapping(value = "/download/{fileName}.{fileType}", method = RequestMethod.GET)
+	public String download(@PathVariable String fileName, @PathVariable String fileType, Model model) {
+
+    	model.addAttribute("fileName", fileName);
+    	model.addAttribute("fileType", fileType);
+		return "/admin/download";
+	}
 }

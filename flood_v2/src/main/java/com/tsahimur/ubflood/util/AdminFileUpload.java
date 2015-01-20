@@ -12,9 +12,9 @@ public class AdminFileUpload {
 	
 	public static String saveFile(MultipartFile file, HttpServletRequest request) {
 		
-				String backLink = "<br><a href=" +  request.getContextPath() +
-            						"/" + "admin" + "/" + ">back</a>";
-						
+		String backLink = "<br><a href=" +  request.getContextPath() +
+           						"//admin//" + ">back</a>";
+		
 		if (!file.isEmpty()) {
             try {
                 byte[] bytes = file.getBytes();
@@ -35,10 +35,12 @@ public class AdminFileUpload {
                 stream.write(bytes);
                 stream.close();
  
-                return "You successfully uploaded you file. Download link => <a href=\"" +
-                			serverFile.getAbsolutePath() +"\"> " +
-                			serverFile.getName() + "</a>" +
-                			backLink;
+                return "You successfully uploaded you file. Your Download link =>" +
+                			"<a href="  +  request.getContextPath() +
+                			"//admin//download//do//" +
+                			serverFile.getName() +
+    						">" + serverFile.getName() + "</a>" +
+    						backLink;
             } catch (Exception e) {
                 return "You failed to upload  => " + e.getMessage() + backLink;
             }
