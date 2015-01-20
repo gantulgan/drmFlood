@@ -24,12 +24,17 @@ public final class Constant {
 		public static final String VIEW_ALERT = "/admin/content/alert";
 		public static final String LIST_ALERT = "/admin/content/alerts";
 		
+		public static final String LIST_FILES = "/admin/content/files";
+		public static final String UPLOAD_FILES = "/admin/upload";
+		public static final String DOWNLOAD_FILES = "/admin/download";
+		
 		public static final String ERROR = "/admin/error";
 		
 		// RD is for REDIRECT
 		public static final String RD_LIST_CATEGORY = "redirect:/admin/category";
 		public static final String RD_LIST_POST = "redirect:/admin/post";
 		public static final String RD_LIST_ALERT = "redirect:/admin/alert";
+		public static final String RD_LIST_FILES = "redirect:/admin/files";
 		
 		//USER PAGES
 		public static final String USER_LIST_POST = "content";

@@ -10,55 +10,34 @@
 <div class="container">
 <div id="contentBody" class="row">
 <hr class="featurette-divider"/>
+		<c:forEach items="${categories}" var="root">
         <div class="col-md-6 col-lg-3">
-                <div class="row featurette">
-					<div class="col-sm-12">
-			          <img class="img-circle img-responsive" id="thumbnail" src="resources/images/circleIcon/news.png" alt="" >
-			        </div>
-		        </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          		<div class="row featurette">
-					<div class="col-sm-12">
-			          <img class="img-circle img-responsive" id="thumbnail" src="resources/images/circleIcon/clipboard.png" alt="">
-			        </div>
-		        </div>
-		</div>      	
-	    <div class="col-md-6 col-lg-3">
-	    	<div class="row featurette">
+        	<div class="row featurette">
 				<div class="col-sm-12">
-		        	<img class="img-circle img-responsive" id="thumbnail" src="resources/images/circleIcon/aperture.png" alt="">
-		      	</div>
+		          <img class="img-circle img-responsive" id="thumbnail" src="resources/images/circleIcon/${root.nameEn}.png" alt="" >
+		        </div>
+        	</div>
+	        <div class="row featurette">
+		        <div class="col-sm-12" >
+		          <h2 class="featurette-heading">${pageContext.response.locale.language == 'en'? root.nameEn : root.nameMon }</h2>
+		          <hr class="featurette-divider">
+		          <div class="col-sm-offset-2 col-sm-10"  id="contentLink">
+						<ul>
+						<c:forEach items="${root.childCategories}" var="child">
+						<li><a href="${pageContext.request.contextPath}/category/${child.id}">${pageContext.response.locale.language == 'en' ? child.nameEn : child.nameMon }</a></li>
+						</c:forEach>
+						</ul>
+		          </div>
+		        </div>
 	      	</div>
-	    </div>
-	    <div class="col-md-6 col-lg-3">
-	    	<div class="row featurette">
+        </div>
+        </c:forEach>
+ 	    <div class="col-md-6 col-lg-3">
+ 	    	<div class="row featurette">
 				<div class="col-sm-12">
 		          <img class="img-circle img-responsive" id="thumbnail" src="resources/images/circleIcon/map.png" alt="">
 		        </div>
 	        </div>
-		</div>      
-</div>
-
-<div id="contentBody" class="row">
-		<c:forEach items="${categories}" var="root">
-        <div class="col-md-6 col-lg-3">
-		        <div class="row featurette">
-			        <div class="col-sm-12" >
-			          <h2 class="featurette-heading">${pageContext.response.locale.language == 'en'? root.nameEn : root.nameMon }</h2>
-			          <hr class="featurette-divider">
-			          <div class="col-sm-offset-2 col-sm-10"  id="contentLink">
-							<ul>
-							<c:forEach items="${root.childCategories}" var="child">
-							<li><a href="${pageContext.request.contextPath}/category/${child.id}">${pageContext.response.locale.language == 'en' ? child.nameEn : child.nameMon }</a></li>
-							</c:forEach>
-							</ul>
-			          </div>
-			        </div>
-		      	</div>
-        </div>
-        </c:forEach>
- 	    <div class="col-md-6 col-lg-3">
 		    <div class="row featurette">
 		        <div class="col-sm-12">
 		          <h2 class="featurette-heading">${mapper}</h2>
@@ -73,5 +52,4 @@
 		<div class="col-xs-12"><hr class="featurette-divider"/></div>
 		</div>
 </div>
-	
 </div>

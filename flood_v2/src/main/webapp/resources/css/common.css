@@ -349,6 +349,9 @@ div.news_category_title
 	color: red;
 	font-style: normal;
 }
+.headerWarning span {
+	margin-left: 50px;
+}
 #mapMenu {
 	margin: auto;
 }

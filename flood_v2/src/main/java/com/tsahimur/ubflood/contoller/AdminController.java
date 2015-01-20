@@ -3,6 +3,7 @@ package com.tsahimur.ubflood.contoller;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
@@ -39,7 +40,6 @@ import com.tsahimur.ubflood.service.AlertService;
 import com.tsahimur.ubflood.util.AdminUtil;
 import com.tsahimur.ubflood.util.CommonUtil;
 import com.tsahimur.ubflood.util.Constant;
-import com.tsahimur.ubflood.util.AdminFileUpload;
 import com.tsahimur.ubflood.web.forms.LoginForm;
 
 @Controller
@@ -281,19 +281,19 @@ public class AdminController {
 		return Constant.PAGE.RD_LIST_ALERT;
 	}	
 	
-	// ---------------------- fileUpload functions
+	// ---------------------- file Upload&Download functions
 	@RequestMapping(value = "/upload", method = RequestMethod.GET)
 	public String upload(Locale locale, Model model) {
 
-		return "/admin/upload";
+		return Constant.PAGE.UPLOAD_FILES;
 	}
 	
-    @RequestMapping(value = "/upload/uploadFile", method = RequestMethod.POST)
+    @RequestMapping(value = "/uploadFile", method = RequestMethod.POST)
     public @ResponseBody
     String uploadFileHandler(/*@RequestParam("name") String name,*/
             @RequestParam("file") MultipartFile file, HttpServletRequest request  ) {
  
-        return AdminFileUpload.saveFile(file, request);
+        return AdminUtil.saveFile(file, request);
     }
     
     @RequestMapping(value = "/download/{fileName}.{fileType}", method = RequestMethod.GET)
@@ -301,6 +301,23 @@ public class AdminController {
 
     	model.addAttribute("fileName", fileName);
     	model.addAttribute("fileType", fileType);
-		return "/admin/download";
+		return Constant.PAGE.DOWNLOAD_FILES;
 	}
+    
+    @RequestMapping(value = "/files", method = RequestMethod.GET)
+	public String files(Locale locale, Model model) {
+    	String[] files = AdminUtil.getAllFiles();
+    	
+    	model.addAttribute("files", files);
+		return Constant.PAGE.LIST_FILES;
+	}
+    
+    @RequestMapping(value = "/file/remove/{fileName}.{fileType}", method = RequestMethod.GET)
+	public String deleteFile(@PathVariable String fileName, @PathVariable String fileType, Model model ){
+
+    	AdminUtil.delFileByName(fileName, fileType);
+   		model.addAttribute("info", "Amjilttai ustgalaa");
+  	
+		return Constant.PAGE.RD_LIST_FILES;
+	}	
 }
