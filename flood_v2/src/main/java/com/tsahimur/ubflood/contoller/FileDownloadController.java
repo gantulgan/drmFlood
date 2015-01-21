@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 
-@RequestMapping("/admin/download/do")
+@RequestMapping("/download/do")
 public class FileDownloadController {
 @Autowired //Must needed
 ServletContext context; //Must needed

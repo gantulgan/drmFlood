@@ -37,7 +37,7 @@
 		<tr>	
 			<td><c:out value="${file}"></c:out></td>
 			<%-- <td><c:out value="${file.link}"></c:out></td> --%>
-			<td><a href="${pageContext.request.contextPath}/admin/download/do/${file}">Link</a></td>
+			<td><a href="${pageContext.request.contextPath}/download/do/${file}">Link</a></td>
 			<td><a href="${pageContext.request.contextPath}/admin/file/remove/${file}" class="btn btn-danger">Delete</a></td>
 		</tr>
 		</c:forEach>
