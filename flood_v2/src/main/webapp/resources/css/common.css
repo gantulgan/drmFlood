@@ -349,6 +349,9 @@ div.news_category_title
 	color: red;
 	font-style: normal;
 }
+.headerWarning span {
+	margin-left: 50px;
+}
 #mapMenu {
 	margin: auto;
 }
@@ -399,4 +402,10 @@ div.news_category_title
 .fullscreen{
 	width: 100%;
 	height: 100%;
+}
+.slide-out-div {
+   padding: 20px;
+    width: 250px;
+    background: #f2f2f2;
+    border: #29216d 2px solid;
 }
