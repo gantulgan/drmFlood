@@ -62,9 +62,11 @@
          </div>
          <div class="headerWarning" >
          <marquee scrollamount="4">
+         <p>
 	         <c:forEach items="${alerts}" var="alert">
-	           <p>${alert.startDate} | ${alert.alertMon}</p>
+	           <span> ${alert.startDate} | ${alert.alertMon} </span>
 	         </c:forEach>
+	     </p>    
          </marquee></div>
      </div>
 </div>
