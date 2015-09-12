@@ -22,28 +22,50 @@ public class Post implements Serializable {
 	private static final long serialVersionUID = 4244374798577974103L;
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id")
 	private int id;
-	
+
 	@Column(name = "title_mon")
 	private String titleMon;
-	
+
 	@Column(name = "title_en")
 	private String titleEn;
 
 	@Column(name = "content_mon")
 	private String contentMon;
-	
+
 	@Column(name = "content_en")
 	private String contentEn;
 
+	@Column(name = "intro_mon")
+	private String introMon;
+
+	@Column(name = "intro_en")
+	private String introEn;
+
 	@Column(name = "active_flag")
 	private boolean activeFlag;
-	
+
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "category_id")
 	private Category category;
+	
+	public String getIntroMon() {
+		return introMon;
+	}
+
+	public void setIntroMon(String introMon) {
+		this.introMon = introMon;
+	}
+
+	public String getIntroEn() {
+		return introEn;
+	}
+
+	public void setIntroEn(String introEn) {
+		this.introEn = introEn;
+	}
 
 	public int getId() {
 		return id;
@@ -108,6 +130,5 @@ public class Post implements Serializable {
 				+ contentEn + ", activeFlag=" + activeFlag + ", category="
 				+ category + "]";
 	}
-	
-	
+
 }

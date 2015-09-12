@@ -12,7 +12,8 @@
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 
 <script src="${pageContext.request.contextPath}/resources/js/custom.js" charset="UTF-8"></script> 
-<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script> 
+<script src="${pageContext.request.contextPath}/resources/js/jquery.tabSlideOut.v1.3.js"></script>
 <!-- <script src="resources/js/jquery.min.js"></script> -->
 <script src="${pageContext.request.contextPath}/resources/js/sb-admin-2.js"></script> 
 <script src="${pageContext.request.contextPath}/resources/js/plugins/metisMenu/metisMenu.min.js"></script> 

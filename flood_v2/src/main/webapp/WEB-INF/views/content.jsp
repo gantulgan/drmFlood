@@ -3,7 +3,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <spring:message var="more" code="common.moredetail" />
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -35,7 +35,7 @@
 				     <p class="bg-primary" style="padding-top: 0px; padding-bottom: 0px;"><a style="color: white;"><img style="height: 30px; width: 30px;" id="thumbnail" src="${pageContext.request.contextPath }resources/images/thumbnail/news2.png" alt="" />
 				    	<strong><c:out value="${pageContext.response.locale.language == 'en' ? post.titleEn : post.titleMon }"/></strong></a></p>
 				    	<div style="display: block; min-height: 80px; max-height: 120px; overflow: hidden;">
-				    	<p >${pageContext.response.locale.language == 'en' ? post.contentEn : post.contentMon}</p>
+				    	<p >${pageContext.response.locale.language == 'en' ? post.introEn : post.introMon}</p>
 				    	</div>
 				    	<p style="text-align: right;"><a style="text-align: right; padding-top: 0px; padding-bottom: 0px;" href="${pageContext.request.contextPath}/content/${post.id}">${more}</a>
 				    	</p>

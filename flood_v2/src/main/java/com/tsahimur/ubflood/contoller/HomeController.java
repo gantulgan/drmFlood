@@ -60,12 +60,19 @@ public class HomeController {
 		model.addAttribute("categories", categories);
 		return "home";
 	}
-	
+
 	@RequestMapping(value = "/mapper", method = RequestMethod.GET)
 	public String mapper(Locale locale, Model model) {
 		List<Category> categories = categoryService.getRootCategories();
 		model.addAttribute("categories", categories);
 		return "mapper";
+	}
+	
+	@RequestMapping(value = "/mapper/fullscreen", method = RequestMethod.GET)
+	public String mapperFullscreen(Locale locale, Model model) {
+		List<Category> categories = categoryService.getRootCategories();
+		model.addAttribute("categories", categories);
+		return "mapper/fullscreenmap_v2";
 	}
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)

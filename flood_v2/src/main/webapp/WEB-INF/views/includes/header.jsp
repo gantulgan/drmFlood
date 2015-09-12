@@ -10,6 +10,8 @@
 <spring:message var="worldbank" code="header.alt.worldbank" />
 <spring:message var="japanemb" code="header.alt.japanemb" />
 
+<%-- <jsp:include page="feedback.jsp"></jsp:include> --%>
+
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
