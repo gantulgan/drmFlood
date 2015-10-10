@@ -6,15 +6,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Ангилал нэмэх</title>
 </head>
 <body>
-this is add category
-
 	<form:form action="." modelAttribute="category" method="POST">
-		<div>Mongol ner <form:input path="nameMon" /></div>
-		<div>English ner <form:input path="nameEn" /></div>
-		<div>Parent Category 
+		<div>Монгол нэр <form:input path="nameMon" /></div>
+		<div>Англи нэр <form:input path="nameEn" /></div>
+		<div>Дээд ангилал 
 		<form:select path="parent">
 			<form:option value="">Root</form:option>
 			<c:forEach items="${categories}" var="cat">
@@ -23,11 +21,11 @@ this is add category
 <%-- 			<form:options items="${categories}" itemValue="id" itemLabel="${nameEn}${nameMon}"/> --%>
 		</form:select>
 		</div>
-		<div>Active_Flag :<form:checkbox path="activeFlag" /></div>
+		<div>Идэвхтэй эсэх :<form:checkbox path="activeFlag" /></div>
 		<div><input type="submit" value="Add"></div>
 	</form:form>
 
 	<br>
-	<a href="${pageContext.request.contextPath}/admin/category">back</a>
+	<a href="${pageContext.request.contextPath}/admin/category">буцах</a>
 </body>
 </html>

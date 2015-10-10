@@ -7,7 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-<title>Files</title>
+<title>Файл болон баримтууд</title>
 </head>
 <body>
 
@@ -26,10 +26,10 @@
 <table class="table table-condensed table-hover ">
 	<thead>
 		<tr>	
-			<td>File name</td>
+			<td>Файлын нэр</td>
 			<!-- <td>Link</td> -->
-			<td>Download</td>
-			<td>Delete</td>
+			<td>Хуулж авах</td>
+			<td>Устгах</td>
 		</tr>
 	</thead>
 	<tbody>
@@ -37,8 +37,8 @@
 		<tr>	
 			<td><c:out value="${file}"></c:out></td>
 			<%-- <td><c:out value="${file.link}"></c:out></td> --%>
-			<td><a href="${pageContext.request.contextPath}/download/do/${file}">Link</a></td>
-			<td><a href="${pageContext.request.contextPath}/admin/file/remove/${file}" class="btn btn-danger">Delete</a></td>
+			<td><a href="${pageContext.request.contextPath}/download/do/${file}">Холбоос</a></td>
+			<td><a href="${pageContext.request.contextPath}/admin/file/remove/${file}" class="btn btn-danger">Устгах</a></td>
 		</tr>
 		</c:forEach>
 	</tbody>

@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-<title>List of Alerts</title>
+<title>Анхааруулгууд</title>
 </head>
 <body>
 
@@ -18,7 +18,7 @@
 <p class="bg-danger"><c:out value="${param.error}"></c:out></p>
 </div>
 <br/>
-<a href="${pageContext.request.contextPath}/admin/alert/new" class="btn btn-default">Create new alert</a>
+<a href="${pageContext.request.contextPath}/admin/alert/new" class="btn btn-default">Шинээр анхааруулга үүсгэх</a>
 <br/>
 <br/>
 <!-- <a class="btn btn-default"> Category </a> -->
@@ -29,15 +29,15 @@
 <table class="table table-condensed table-hover ">
 	<thead>
 		<tr>	
-			<td>ID</td>
-			<td>Start Date</td>
-			<td>End Date</td>
-			<td>Active Flag</td>
+			<td>ID / #</td>
+			<td>Эхлэх огноо</td>
+			<td>Дуусах огноо</td>
+			<td>Идэвхтэй эсэх</td>
 			<td>Монгол хэлээр</td>
 			<td>In English</td>
-			<td>Detail</td>
-			<td>Update</td>
-			<td>Remove</td>
+			<td>Дэлгэрэнгүй</td>
+			<td>Өөрчлөх</td>
+			<td>Арилгах</td>
 		</tr>
 	</thead>
 	<tbody>
@@ -49,9 +49,9 @@
 			<td><c:out value="${alert.activeFlag}"></c:out></td>
 			<td><c:out value="${alert.alertMon}"/></td>
 			<td><c:out value="${alert.alertEn}"/></td>
-			<td><a href="${pageContext.request.contextPath}/admin/alert/view/${alert.id}" class="btn btn-default">Detail</a></td>
-			<td><a href="${pageContext.request.contextPath}/admin/alert/edit/${alert.id}" class="btn btn-default">Update</a></td>
-			<td><a href="${pageContext.request.contextPath}/admin/alert/remove/${alert.id}" class="btn btn-danger">Remove</a></td>
+			<td><a href="${pageContext.request.contextPath}/admin/alert/view/${alert.id}" class="btn btn-default">Дэлгэрэнгүй</a></td>
+			<td><a href="${pageContext.request.contextPath}/admin/alert/edit/${alert.id}" class="btn btn-default">Өөрчлөх</a></td>
+			<td><a href="${pageContext.request.contextPath}/admin/alert/remove/${alert.id}" class="btn btn-danger">Арилгах</a></td>
 		</tr>
 		</c:forEach>
 	</tbody>

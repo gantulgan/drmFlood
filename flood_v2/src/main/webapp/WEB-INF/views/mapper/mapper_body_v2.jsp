@@ -31,10 +31,13 @@
 
 <spring:message var="legend" code="map.legend" />
 
-<c:set var="jemr"
-	value="Үерийн аюул, эрсдэлийн үнэлгээ, зураглал хийсэн \"ЖЭМР\" ХХК, 2014-2015 он" />
-<c:set var="usny"
-	value="Зураглал хийсэн \"Усны Эрчим\" ХХК, 2014-2015 он" />
+<spring:message var="jemr" code="map.author.jemr" />
+<spring:message var="usny" code="map.author.usny" />
+
+<spring:message var="savemap" code="map.save.img" />
+
+
+
 
 <style>
 <!--
@@ -55,7 +58,7 @@
 	<!-- Our app HTML tags here  -->
 	<div id="control" class="col-xs-2 control districtControl"
 		style="text-align: left;">
-		<h4>${maptype}</h4>
+		<h5>${maptype}</h5>
 		<label><input type="radio" name="layer" value="hazard"
 			class="layerControl"> ${hazard}</label><br /> <label><input
 			type="radio" name="layer" value="exposure" class="layerControl">
@@ -70,7 +73,7 @@
 			${hazrisk1}</label><br /> <label><input type="radio" name="layer"
 			value="object1" class="layerControl"> ${object1}</label><br />
 		<hr />
-		<h4>${overlay}</h4>
+		<h5>${overlay}</h5>
 		<label><input type="radio" name="borderLayer" value="none"
 			class="overlayControl">${none}</label><br /> <label><input
 			type="radio" name="borderLayer" value="duureg" class="overlayControl">${district}</label><br />
@@ -145,7 +148,7 @@
 <div class="row">
 	<div class="col-xs-2">
 		<br /> <a id="export-map" class="btn btn-primary"><i
-			class="icon-download"></i>Зураг хадгалах</a>
+			class="icon-download"></i>${savemap}</a>
 	</div>
 	<div class="col-xs-10">
 		${legend}<br/>

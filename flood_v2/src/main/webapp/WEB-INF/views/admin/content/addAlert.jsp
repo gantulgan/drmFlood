@@ -5,21 +5,19 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Add Alerts</title>
+<title>Анхааруулга нэмэх</title>
 </head>
 <body>
-this is add alert
-
 	<form:form action="." modelAttribute="alert" method="POST">
-		<div>Start Date:	<form:input path="startDate" type="datetime-local"/></div>
-		<div>End Date:		<form:input path="endDate" type="datetime-local"/></div>
+		<div>Эхлэх огноо:	<form:input path="startDate" type="datetime-local"/></div>
+		<div>Дуусах огноо:		<form:input path="endDate" type="datetime-local"/></div>
 		<div>Монгол хэлээр:	<form:input path="alertMon" /></div>
-		<div>In English:	<form:input path="alertEn" /></div>
-		<div>Active_Flag :	<form:checkbox path="activeFlag" /></div>
+		<div>Англиар:	<form:input path="alertEn" /></div>
+		<div>Идэвхтэй эсэх :	<form:checkbox path="activeFlag" /></div>
 		<div><input type="submit" value="Add"></div>
 	</form:form>
 
 	<br>
-	<a href="${pageContext.request.contextPath}/admin/alert">back</a>
+	<a href="${pageContext.request.contextPath}/admin/alert">буцах</a>
 </body>
 </html>

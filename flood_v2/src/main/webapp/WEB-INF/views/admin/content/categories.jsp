@@ -7,7 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-<title>Insert title here</title>
+<title>Ангиллууд</title>
 </head>
 <body>
 
@@ -19,7 +19,7 @@
 <p class="bg-danger"><c:out value="${param.error}"></c:out></p>
 </div>
 <br/>
-<a href="${pageContext.request.contextPath}/admin/category/new" class="btn btn-default">Create new category</a>
+<a href="${pageContext.request.contextPath}/admin/category/new" class="btn btn-default">Шинээр ангилал үүсгэх</a>
 <br/>
 <br/>
 <!-- <a class="btn btn-default"> Category </a> -->
@@ -30,14 +30,14 @@
 <table class="table table-condensed table-hover ">
 	<thead>
 		<tr>	
-			<td>Dugaar</td>
-			<td>Mon Name</td>
-			<td>Eng Name</td>
-			<td>Active Flag</td>
-			<td>Parent Category</td>
-			<td>Detail</td>
-			<td>Update</td>
-			<td>Remove</td>
+			<td>Дугаар</td>
+			<td>Нэр - Монгол</td>
+			<td>Нэр - Англи</td>
+			<td>Идэвхтэй эсэх</td>
+			<td>Дээд/хамаарагдах ангилал</td>
+			<td>Дэлгэрэнгүй</td>
+			<td>Өөрчлөх</td>
+			<td>Арилгах</td>
 		</tr>
 	</thead>
 	<tbody>

@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Нийтлэл засах</title>
 <script
 	src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script
@@ -20,16 +20,16 @@
 
 	<form:form action="." modelAttribute="post" method="POST">
 		<div>
-			Mongol garchig
+			Монгол гарчиг
 			<form:input path="titleMon" />
 		</div>
 		<div>
-			English garchig
+			Англи гарчиг
 			<form:input path="titleEn" />
 		</div>
 		<form:hidden path="id" />
 		<div>
-			Parent Category
+			Дээд/хамаарах ангилал
 			<form:select id="categoryCombo" path="category">
 				<c:forEach items="${categories}" var="cat">
 					<form:option id="${cat.id}" value="${cat.id}">${cat.nameMon} | ${cat.nameEn }</form:option>
@@ -39,12 +39,12 @@
 
 		<div class="row">
 			<div class="col-xs-6">
-				Mongol intro<br />
+				Хураангуй - Монгол<br />
 				<form:textarea class="texteditor" path="introMon"
 					style="height: 100px;" />
 			</div>
 			<div class="col-xs-6">
-				English intro<br />
+				Хураангүй - Англи<br />
 				<form:textarea class="texteditor" path="introEn"
 					style="height: 100px;" />
 			</div>
@@ -52,12 +52,12 @@
 		<br />
 		<div class="row">
 			<div class="col-xs-6">
-				Mongol content<br />
+				Мэдээ - Монгол<br />
 				<form:textarea class="texteditor" path="contentMon"
 					style="height: 400px;" />
 			</div>
 			<div class="col-xs-6">
-				English content<br />
+				Мэдээ - Англи<br />
 				<form:textarea class="texteditor" path="contentEn"
 					style="height: 400px;" />
 			</div>
@@ -65,7 +65,7 @@
 		</div>
 
 		<div>
-			Active_Flag :
+			Идэвхтэй эсэх :
 			<form:checkbox path="activeFlag" />
 		</div>
 		<div>
@@ -86,6 +86,6 @@
 	</script>
 
 	<br>
-	<a href="${pageContext.request.pathInfo}../">back</a>
+	<a href="${pageContext.request.pathInfo}../">буцах</a>
 </body>
 </html>

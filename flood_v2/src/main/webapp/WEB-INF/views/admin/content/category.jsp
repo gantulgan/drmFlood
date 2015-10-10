@@ -8,17 +8,17 @@
 <title>Амжилттай категори</title>
 </head>
 <body>
-	Category Id : ${category.id}<br/>
-	Name Mon : ${category.nameMon}<br/>
-	Name Eng : ${category.nameEn}<br/>
-	ActiveFlag : ${category.activeFlag}<br/>
-	Parent Category : ${category.parent.nameMon} | ${category.parent.nameEn}<br/>
-	Posts : <br/>
+	Ангиллын дугаар/Id : ${category.id}<br/>
+	Монгол нэр : ${category.nameMon}<br/>
+	Англи нэр : ${category.nameEn}<br/>
+	Идэвхтэй эсэх : ${category.activeFlag}<br/>
+	Дээд/хамаарагдах ангилал : ${category.parent.nameMon} | ${category.parent.nameEn}<br/>
+	Нийтлэл : <br/>
 	<c:forEach items="${category.posts}" var="post">
 		Post Mon Title: ${post.titleMon} | ${post.titleEn}  	
 	</c:forEach>
 	
 	<br>
-	<a href="${pageContext.request.pathInfo}../">back</a>
+	<a href="${pageContext.request.pathInfo}../">буцах</a>
 </body>
 </html>

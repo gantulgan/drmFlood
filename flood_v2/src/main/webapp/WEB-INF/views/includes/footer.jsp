@@ -48,16 +48,7 @@
 			<div id="sitemap">
 				<ul>
 				<li>
-				<a href=""><img src="${pageContext.request.contextPath}/resources/images/icons/email.png" alt="email" style="width: 25px; height: 25px"></img></a>
-				<a href="https://www.facebook.com"><img src="${pageContext.request.contextPath}/resources/images/icons/facebook.png" alt="facebook" style="width: 25px; height: 25px"></img></a>
-				</li>
-				<li>
-				<a href="https://plus.google.com/"><img src="${pageContext.request.contextPath}/resources/images/icons/googleplus.png" alt="google+" style="width: 25px; height: 25px"></img></a>
-				<a href="https://www.twitter.com"><img src="${pageContext.request.contextPath}/resources/images/icons/twitter.png" alt="twitter" style="width: 25px; height: 25px"></img></a>
-				</li>
-				<li>
-				<a href="https://www.instagram.com"><img src="${pageContext.request.contextPath}/resources/images/icons/instagram.png" alt="instagram" style="width: 25px; height: 25px"></img></a>
-				<a href="http://www.youtube.com/watch?v=rnHX-SJIvG0"><img src="${pageContext.request.contextPath}/resources/images/icons/youtube.png" alt="youtube" style="width: 25px; height: 25px"></img></a>
+				<a href="https://www.facebook.com/ub.gov"><img src="${pageContext.request.contextPath}/resources/images/icons/facebook.png" alt="facebook" style="width: 25px; height: 25px"></img></a>
 				</li>
 				</ul>
 		</div>

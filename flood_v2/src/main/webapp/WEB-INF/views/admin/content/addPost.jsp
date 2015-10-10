@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Бичлэг нэмэх | Post publish</title>
+<title>Нийтлэл нэмэх | Post publish</title>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 <script src=<c:url value="/resources/js/bootstrap.min.js"/>></script>
@@ -13,18 +13,17 @@
 <link href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body style="background-color: white;">
-	this is add post
 	<form:form action="." modelAttribute="post" method="POST">
 		<div>
-			Mongol garchig
+			Монгол гарчиг
 			<form:input path="titleMon" />
 		</div>
 		<div>
-			English garchig
+			Англи гарчиг
 			<form:input path="titleEn" />
 		</div>
 		<div>
-			Parent Category
+			Дээд/харгалзан ангилал
 			<form:select path="category">
 				<c:forEach items="${categories}" var="cat">
 					<form:option value="${cat.id}">${cat.nameMon} | ${cat.nameEn }</form:option>
@@ -32,30 +31,30 @@
 			</form:select>
 			<div class="row">
 				<div class="col-xs-6">
-					Mongol intro<br />
+					Хураангуй - Монголоор<br />
 					<form:textarea class="texteditor" path="introMon" style="height: 100px;" />
 				</div>
 				<div class="col-xs-6">
-					English intro<br />
+					Хураангуй - Англи<br />
 					<form:textarea class="texteditor" path="introEn" style="height: 100px;" />
 				</div>
 			</div>
 			<br />
 			<div class="row">
 				<div class="col-xs-6">
-					Mongol content<br />
+					Мэдээний бие - Монгол<br />
 					<form:textarea class="texteditor" path="contentMon"
 						style="height: 400px;" />
 				</div>
 				<div class="col-xs-6">
-					English content<br />
+					Мэдээний бие - Англи<br />
 					<form:textarea class="texteditor" path="contentEn"
 						style="height: 400px;" />
 				</div>
 			</div>
 		</div>
 		<div>
-			Active_Flag :<br />
+			Идэвхтэй эсэх :<br />
 			<form:checkbox path="activeFlag" />
 		</div>
 		<div>
@@ -75,6 +74,6 @@
 		});
 	</script>
 	<br>
-	<a href="${pageContext.request.contextPath}/admin/post">back</a>
+	<a href="${pageContext.request.contextPath}/admin/post">буцах</a>
 </body>
 </html>

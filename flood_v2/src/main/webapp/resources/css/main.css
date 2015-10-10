@@ -238,3 +238,7 @@ div#location {
 #location a:focus {
 	opacity: 0.7;
 }
+
+.districtControl {
+	font-size: x-small;
+}

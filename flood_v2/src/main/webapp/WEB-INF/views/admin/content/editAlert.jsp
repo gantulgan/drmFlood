@@ -6,22 +6,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Edit Alert</title>
+<title>Анхааруулга засах</title>
 </head>
 <body>
-this is edit alert
-
 	<form:form action="." modelAttribute="alert" method="POST">
 		<form:hidden path="id"/>
-		<div>Start Date:	<form:input path="startDate"  type="datetime-local" /></div>
-		<div>End Date:		<form:input path="endDate"  type="datetime-local" /></div>
+		<div>Эхлэх огноо:	<form:input path="startDate"  type="datetime-local" /></div>
+		<div>Дуусах огноо:		<form:input path="endDate"  type="datetime-local" /></div>
 		<div>Монгол хэлээр:	<form:input path="alertMon" /></div>
 		<div>In English:	<form:input path="alertEn" /></div>
-		<div>Active_Flag :	<form:checkbox path="activeFlag" /></div>
+		<div>Идэвхтэй эсэх :	<form:checkbox path="activeFlag" /></div>
 		<div><input type="submit" value="Update"></div>
 	</form:form>
 	
 	<br>
-	<a href="${pageContext.request.pathInfo}../">back</a>
+	<a href="${pageContext.request.pathInfo}../">буцах</a>
 </body>
 </html>

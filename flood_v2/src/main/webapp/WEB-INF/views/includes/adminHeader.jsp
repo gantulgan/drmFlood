@@ -12,11 +12,11 @@
 %>
 <div class="row">
 	<div class="col-xs-1" ></div>
-	<div class="col-xs-1 btn btn-primary" ><a style="color: white;" href="${pageContext.request.contextPath}/admin/">Admin home</a></div>
-	<div class="col-xs-1 btn btn-primary" ><a style="color: white;" href="${pageContext.request.contextPath}/admin/category/">Category</a></div>
-	<div class="col-xs-1 btn btn-primary" ><a style="color: white;" href="${pageContext.request.contextPath}/admin/post/">Post</a></div>
-	<div class="col-xs-1 btn btn-primary" ><a style="color: white;" href="${pageContext.request.contextPath}/admin/alert/">Alert</a></div>
-	<div class="col-xs-1 btn btn-primary" ><a style="color: white;" href="${pageContext.request.contextPath}/admin/files/">Files</a></div>
+	<div class="col-xs-1 btn btn-primary" ><a style="color: white;" href="${pageContext.request.contextPath}/admin/">Админ нүүр</a></div>
+	<div class="col-xs-1 btn btn-primary" ><a style="color: white;" href="${pageContext.request.contextPath}/admin/category/">Ангилал</a></div>
+	<div class="col-xs-1 btn btn-primary" ><a style="color: white;" href="${pageContext.request.contextPath}/admin/post/">Нийтлэл</a></div>
+	<div class="col-xs-1 btn btn-primary" ><a style="color: white;" href="${pageContext.request.contextPath}/admin/alert/">Урсдаг анхааруулга</a></div>
+	<div class="col-xs-1 btn btn-primary" ><a style="color: white;" href="${pageContext.request.contextPath}/admin/files/">Файлууд</a></div>
 	<div class="col-xs-1"></div>
-	<div class="col-xs-1 btn btn-danger" ><a style="color: white;" href="${pageContext.request.contextPath}/admin/logout/">Log out</a></div>
+	<div class="col-xs-1 btn btn-danger" ><a style="color: white;" href="${pageContext.request.contextPath}/admin/logout/">Гарах</a></div>
 </div>

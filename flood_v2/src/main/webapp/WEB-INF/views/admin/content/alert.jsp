@@ -7,12 +7,12 @@
 <title>Амжилттай alert</title>
 </head>
 <body>
-	Alert Id : ${alert.id}<br/>
-	Alert Mon : ${alert.alertMon}<br/>
-	Alert Eng : ${alert.alertEn}<br/>
-	ActiveFlag : ${alert.activeFlag}<br/>
-	Start Date : ${alert.startDate}<br/>
-	End Date : ${alert.endDate}<br/>
+	Анхааруулгын дугаар : ${alert.id}<br/>
+	мэссэж - Монголоор : ${alert.alertMon}<br/>
+	мэссэж - Англиар : ${alert.alertEn}<br/>
+	Идэвхтэй эсэх : ${alert.activeFlag}<br/>
+	Эхлэх огноо : ${alert.startDate}<br/>
+	Дуусах огноо : ${alert.endDate}<br/>
 	
 	<a href="${pageContext.request.pathInfo}../">back</a>
 </body>

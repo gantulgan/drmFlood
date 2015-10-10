@@ -7,17 +7,17 @@
 <title>Амжилттай бичлэг нэмэв</title>
 </head>
 <body>
-	Post Id : ${post.id}<br/>
-	Name Mon : ${post.titleMon}<br/>
-	Name Eng : ${post.titleEn}<br/>
-	ActiveFlag : ${post.activeFlag}<br/>
-	Parent Category : ${post.category.nameMon} | ${post.category.nameEn}<br/>
-	Posts : <br/>
-	Post Mon | En Title: ${post.titleMon} | ${post.titleEn}  
-	<div>Post in Mn: ${post.contentMon}</div>
-	<div>Post in En: ${post.contentEn}</div>	
+	Нийтлэлийн дугаар/Id : ${post.id}<br/>
+	Гарчиг - Монгол : ${post.titleMon}<br/>
+	Гарчиг - Англи : ${post.titleEn}<br/>
+	Идэвхтэй эсэх : ${post.activeFlag}<br/>
+	Дээд/хамаарах ангилал : ${post.category.nameMon} | ${post.category.nameEn}<br/>
+	Нийтлэлүүд : <br/>
+	Гарчиг : Монгол | Англи :: ${post.titleMon} | ${post.titleEn}  
+	<div>Нийтлэл - Монголоор :: ${post.contentMon}</div>
+	<div>Нийтлэл - Англиар :: ${post.contentEn}</div>	
 		
 	<br>
-	<a href="${pageContext.request.pathInfo}../">back</a>
+	<a href="${pageContext.request.pathInfo}../">буцах</a>
 </body>
 </html>
