@@ -21,7 +21,7 @@
 		        <div class="col-sm-12" >
 		          <h2 class="featurette-heading">${pageContext.response.locale.language == 'en'? root.nameEn : root.nameMon }</h2>
 		          <hr class="featurette-divider">
-		          <div class="col-sm-offset-2 col-sm-10"  id="contentLink">
+		          <div class="contentLink">
 						<ul>
 						<c:forEach items="${root.childCategories}" var="child">
 						<li><a href="${pageContext.request.contextPath}/category/${child.id}">${pageContext.response.locale.language == 'en' ? child.nameEn : child.nameMon }</a></li>
@@ -42,7 +42,7 @@
 		        <div class="col-sm-12">
 		          <h2 class="featurette-heading">${mapper}</h2>
 		          <hr class="featurette-divider">
-		          <div class="col-sm-offset-3 col-sm-9" id="contentLink">
+		          <div class="contentLink" >
 		          <a href="${pageContext.request.contextPath}/mapper">${mapper}</a>
 		          </div>
 		        </div>

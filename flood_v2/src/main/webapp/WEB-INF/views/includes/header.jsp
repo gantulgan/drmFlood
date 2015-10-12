@@ -27,7 +27,7 @@
 	      	<img  class="headerLogo" alt="${ubmayor}"  title="${ubmayor}" src="${pageContext.request.contextPath}/resources/images/icons/ub_logo_.png"/>
 	      </a>
 	      <a class="navbar-brand" href="http://www.worldbank.org/" >
-	      	<img  class="headerLogo" style="background-color: white; padding: 3px;" alt="${worldbank }" title="${worldbank }" src="http://www.worldbank.org/sites/all/modules/wb_blocks/images/logo-wb-header-en.svg"/>
+	      	<img  class="headerLogo" style="background-color: white; padding: 3px;" alt="${worldbank }" title="${worldbank }" src="${pageContext.request.contextPath}/resources/images/icons/wb_logo.svg"/>
 	      </a>
 	      <a class="navbar-brand" href="http://www.mn.emb-japan.go.jp/">
 	      	<img  class="headerLogo" alt="${japanemb }" title="${japanemb }" src="${pageContext.request.contextPath}/resources/images/icons/japan.png" />

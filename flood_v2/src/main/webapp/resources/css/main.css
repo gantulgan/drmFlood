@@ -119,18 +119,18 @@ div#contentBody {
 	height: 140px;
 	margin: 10px auto;
 }
-div#contentLink {
-	text-align: left;
+div.contentLink {
+	text-align: center;
 }
-#contentLink ul {
+.contentLink ul {
 	list-style-type: none;
 }
-#contentLink a {
+.contentLink a {
 	text-decoration: none;
 	display: inline-block;
 	color: black;
 }
-#contentLink a:hover, a:focus {
+.contentLink a:hover, a:focus {
 	text-decoration: underline;
 	color: blue;
 }

@@ -37,6 +37,10 @@
 <spring:message var="savemap" code="map.save.img" />
 
 
+<spring:message var="desc_arga" code="map.desc.imgurl.arga" />
+<spring:message var="desc_hazrisk01" code="map.desc.imgurl.hazr01" />
+<spring:message var="desc_hazrisk1" code="map.desc.imgurl.hazr1" />
+<spring:message var="desc_object1" code="map.desc.imgurl.object1" />
 
 
 <style>
@@ -156,29 +160,29 @@
 			<p>${textHazard} ${low} <img src="resources/images/map_desc/color_map.jpg" alt=""> ${high} <p>
 		</div>
 		<div class="description exposure">
-			<p>${textExposure} ${low} <img src="resources/images/map_desc/color_map.jpg" alt=""> ${high} <p>
+			<span>${textExposure} ${low} <img src="resources/images/map_desc/color_map.jpg" alt=""> ${high}</span>
 		</div>
 		<div class="description vulnerability">
-			<p>${textVulnerability} ${low} <img  src="resources/images/map_desc/color_map.jpg" alt=""> ${high} <p>
+			<span>${textVulnerability} ${low} <img  src="resources/images/map_desc/color_map.jpg" alt=""> ${high}</span>
 		</div>
 		<div class="description risk">
-			<p>${textRisk} ${low} <img  src="resources/images/map_desc/color_map.jpg" alt=""> ${high} <p>
+			<span>${textRisk} ${low} <img  src="resources/images/map_desc/color_map.jpg" alt=""> ${high}</span>
 		</div>
 		<div class="description arga">
-			<img width="100%"
-				src="resources/images/map_desc/tailbar_arga_hemjeeni.jpg" alt="">
+			<img style="max-width : 100%; width: auto; height: auto;" 
+				src="resources/images/map_desc/${desc_arga}" alt="">
 		</div>
 		<div class="description hazrisk01">
-			<img width="100%"
-				src="resources/images/map_desc/tailbar_0.1_prob_legend.jpg" alt="">
+			<img style="max-width : 100%; width: auto; height: auto;" 
+				src="resources/images/map_desc/${desc_hazrisk01}" alt="">
 		</div>
 		<div class="description hazrisk1">
-			<img width="100%"
-				src="resources/images/map_desc/tailbar_1prob_ legend.jpg" alt="">
+			<img style="max-width : 100%; width: auto; height: auto;" 
+				src="resources/images/map_desc/${desc_hazrisk1}" alt="">
 		</div>
 		<div class="description object1">
-			<img width="100%"
-				src="resources/images/map_desc/tailbar_object.jpg" alt="">
+			<img style="max-width : 100%; width: auto; height: auto;" 
+				src="resources/images/map_desc/${desc_object1}" alt="">
 		</div>
 	</div>
 </div>
