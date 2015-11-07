@@ -1,5 +1,7 @@
 package com.tsahimur.ubflood.util;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import org.jsoup.Jsoup;
@@ -47,4 +49,17 @@ public class CommonUtil {
 		
 		return c;
 	}
+
+
+    public static List<Post> sortPostsLastFirst( List<Post> posts ){
+        if (posts.size() > 0) {
+            Collections.sort(posts, new Comparator<Post>() {
+                @Override
+                public int compare(final Post object1, final Post object2) {
+                    return (object2.getId() - object1.getId());
+                }
+            });
+        }
+        return posts;
+    }
 }

@@ -15,19 +15,15 @@
 <title>${pageTitle}</title>
 </head>
 <body>
-
 	<jsp:include page="${pageContext.request.pathInfo}../includes/adminHeader.jsp"></jsp:include>
-
-	this is admin home page
-	<br>
-		
-	Language : <a href="?lang=en">English</a>|<a href="?lang=mn">Mongolian</a>|<a href="?lang=fr">French</a>
-	<h3>
-	welcome.springmvc : <spring:message code="common.message.unimplemented" text="default text" />
-	</h3>
-<%-- 	${post.id == '52' ? 'yes':'no'} --%>
-	Current Locale : ${pageContext.response.locale.language == 'en' ? 'english' : 'mongolian'}
-	${pageContext.request.contextPath}
-	
+    <div class="container">
+    <h3>Админ хэсэгт тавтай морилно уу.</h3>
+    <ul class="list-unstyled">
+        <li><a href="${pageContext.request.contextPath}/admin/category/">Ангилал</a></li>
+        <li><a href="${pageContext.request.contextPath}/admin/post/">Нийтлэл</a></li>
+        <li><a href="${pageContext.request.contextPath}/admin/alert/">Урсдаг анхааруулга</a></li>
+        <li><a href="${pageContext.request.contextPath}/admin/files/">Файлууд</a></li>
+    </ul>
+    </div>
 </body>
 </html>

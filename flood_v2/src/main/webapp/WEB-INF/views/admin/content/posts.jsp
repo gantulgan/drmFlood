@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +13,7 @@
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 <script src=<c:url value="/resources/js/bootstrap.min.js"/>></script>
-<script src=<c:url value="/resources/jslib/tinymce.min.js"/>></script>
+<script src=<c:url value="/resources/js/tinymce/tinymce.min.js"/>></script>
 </head>
 <body>
 
@@ -28,18 +29,33 @@
 <br/>
 <br/>
 
-<table class="table table-condensed table-hover ">
+<c:set var="currentPage" value="0" />
+<c:if test="${param.page.matches('[0-9]+')}">
+    <c:set var="currentPage" value="${param.page}" />
+</c:if>
+Одоогийн хуудас : ${currentPage + 1}<br/>
+хуудас : <c:forEach var="page" begin="1" end="${pages}" >
+    <c:choose>
+        <c:when test="${page - 1 == currentPage}">
+            <strong>${page}</strong>
+        </c:when>
+        <c:otherwise>
+            <a href="?page=${page-1}">${page}</a>
+        </c:otherwise>
+    </c:choose>
+
+</c:forEach>
+<table class="table table-condensed table-hover table-bordered table-striped ">
 	<thead>
 		<tr>	
-			<td>Dugaar</td>
+			<td>№</td>
 			<td>Гарчиг - Монгол</td>
 			<td>Гарчиг - Англи</td>
-			<td>Идэвхтэй эсэх</td>
 			<td>Ангилал</td>
-			<td>Хураангуй - Монголоор</td>
-			<td>Хураангуй - Англиар</td>
-			<td>Мэдээний агуулга - Монгол</td>
-			<td>Мэдээний агуулга - Англи</td>
+			<td>Хураангуй - Монголоор <br/>(Эхний 200 тэмдэгт)</td>
+			<td>Хураангуй - Англиар <br/>(Эхний 200 тэмдэгт)</td>
+			<td>Мэдээний агуулга - Монгол <br/>(Эхний 200 тэмдэгт)</td>
+			<td>Мэдээний агуулга - Англи <br/>(Эхний 200 тэмдэгт)</td>
 			<td>Дэлгэрэнгүй</td>
 			<td>Өөрчлөх</td>
 			<td>Арилгах</td>
@@ -51,12 +67,11 @@
 			<td><c:out value="${post.id}"></c:out></td>
 			<td><c:out value="${post.titleMon}"></c:out></td>
 			<td><c:out value="${post.titleEn}"></c:out></td>
-			<td><c:out value="${post.activeFlag}"></c:out></td>
 			<td><c:out value="${post.category.nameMon}"/>|<c:out value="${post.category.nameEn}"/></td>
-			<td><c:out value="${post.introMon}"></c:out></td>
-			<td><c:out value="${post.introEn}"></c:out></td>
-			<td><c:out value="${post.contentMon}"></c:out></td>
-			<td><c:out value="${post.contentEn}"></c:out></td>
+			<td><c:out value="${fn:substring(post.introMon, 0, 200)}"></c:out></td>
+			<td><c:out value="${fn:substring(post.introEn, 0, 200)}"></c:out></td>
+			<td><c:out value="${fn:substring(post.contentMon, 0, 200)}"></c:out></td>
+			<td><c:out value="${fn:substring(post.contentEn, 0, 200)}"></c:out></td>
 			<td><a href="${pageContext.request.contextPath}/admin/post/view/${post.id}" class="btn btn-default">Дэлгэрэнгүй</a></td>
 			<td><a href="${pageContext.request.contextPath}/admin/post/edit/${post.id}" class="btn btn-default">Өөрчлөх</a></td>
 			<td><a href="${pageContext.request.contextPath}/admin/post/remove/${post.id}" class="btn btn-danger">Устгах</a></td>

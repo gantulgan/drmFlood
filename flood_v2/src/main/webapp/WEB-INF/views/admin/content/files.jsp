@@ -23,7 +23,7 @@
 <br/>
 <br/>
 
-<table class="table table-condensed table-hover ">
+<table class="table table-condensed table-hover table-bordered table-striped ">
 	<thead>
 		<tr>	
 			<td>Файлын нэр</td>

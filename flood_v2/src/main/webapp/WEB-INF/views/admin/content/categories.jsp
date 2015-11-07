@@ -27,7 +27,7 @@
 <!-- <a class="btn btn-primary"> Alert </a> -->
 <!-- <a class="btn btn-danger">Log out</a> -->
 
-<table class="table table-condensed table-hover ">
+<table class="table table-condensed table-hover table-bordered table-striped  ">
 	<thead>
 		<tr>	
 			<td>Дугаар</td>

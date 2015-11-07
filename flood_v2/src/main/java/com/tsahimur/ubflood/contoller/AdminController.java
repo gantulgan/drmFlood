@@ -17,6 +17,7 @@ import org.apache.commons.fileupload.FileUpload;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.support.PagedListHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.WebDataBinder;
@@ -180,9 +181,28 @@ public class AdminController {
 
 	// ---------------------- Post functions
 	@RequestMapping(value = "/post", method = RequestMethod.GET)
-	public String getPosts(Model model) {
+	public String getPosts(Model model, String page) {
 		List<Post> posts = postService.getAllPosts();
-		model.addAttribute("posts", posts);
+        posts = CommonUtil.sortPostsLastFirst(posts);
+
+        PagedListHolder<Post> pagedListHolder = new PagedListHolder<Post>(posts);
+        pagedListHolder.setPageSize(20);
+
+        int pageNum = 0;
+        try {
+            pageNum = Integer.parseInt(page);
+        }catch (NumberFormatException ne){
+            page = "0";
+        }
+
+        pagedListHolder.setPage(pageNum);
+        List<Post> returnPosts = pagedListHolder.getPageList();
+        int pageSize = pagedListHolder.getPageCount();
+
+
+        model.addAttribute("posts", returnPosts);
+        model.addAttribute("pages", pageSize);
+
 		return Constant.PAGE.LIST_POST;
 	}
 	
